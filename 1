@@ -1,0 +1,7 @@
+The producer sends each row of DB Table/Text files as Messages (which is an array of bytes)
+
+![image](https://user-images.githubusercontent.com/45539698/65785306-b3773980-e171-11e9-8b90-c8f61f6e4e52.png)
+
+These messages are sent to Kafka Server (Not directly to consumer). Any consumer interested in the Message has to request the Kafka Server:
+
+![image](https://user-images.githubusercontent.com/45539698/65785858-fc7bbd80-e172-11e9-8ebe-80eb31c614d8.png)
