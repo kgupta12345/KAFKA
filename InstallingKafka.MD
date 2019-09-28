@@ -17,9 +17,14 @@ Now Let's create a Producer:
 bin/kafka-console-producer.sh --broker-list localhost:9092 --topic demotopic
 
 
+
+
+
 Now Let's create a Consumer:
  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic demotopic --from-beginning
  
- 
- 
+ ![image](https://user-images.githubusercontent.com/45539698/65813234-18717480-e1f0-11e9-8440-ce24d5a239bb.png)
+
+ WHAT IF
  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic someothertopic --from-beginning
+![image](https://user-images.githubusercontent.com/45539698/65813241-363ed980-e1f0-11e9-8806-a4fd584ab632.png)
