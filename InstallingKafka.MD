@@ -1,3 +1,4 @@
+STEP#0: Get Java
 STEP#1: Download kafka_2.12-2.3.0.tgz
 STEP#2: tar -xzf kafka_2.12-2.3.0.tgz
 STEP#3: cd kafka_2.12-2.3.0
@@ -6,3 +7,7 @@ STEP#4: Start the zookeeper server (here, it manages brokers on distributed syst
 
 Now start the Kafka server/broker:
 **rahul@rahul-VirtualBox:/usr/local/kafka/kafka_2.12-2.3.0$** bin/kafka-server-start.sh config/server.properties
+
+
+
+bin/kafka-topics.sh --zookeeper localhost:2181 --create --topic demotopic --replication-factor 1 --partitions 2 
