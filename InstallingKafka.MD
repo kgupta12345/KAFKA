@@ -11,3 +11,15 @@ Now start the Kafka server/broker:
 
 
 bin/kafka-topics.sh --zookeeper localhost:2181 --create --topic demotopic --replication-factor 1 --partitions 2 
+As we have 1 server/broker running, therefore both the partitions are created on te single server/broker.
+
+Now Let's create a Producer:
+bin/kafka-console-producer.sh --broker-list localhost:9092 --topic demotopic
+
+
+Now Let's create a Consumer:
+ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic demotopic --from-beginning
+ 
+ 
+ 
+ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic someothertopic --from-beginning
