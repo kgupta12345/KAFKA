@@ -4,5 +4,5 @@ STEP#3: cd kafka_2.12-2.3.0
 STEP#4: Start the zookeeper server (here, it manages brokers on distributed system)
 **rahul@rahul-VirtualBox:/usr/local/kafka/kafka_2.12-2.3.0$** bin/zookeeper-server-start.sh config/zookeeper.properties
 
-Now start the Kafka server:
+Now start the Kafka server/broker:
 **rahul@rahul-VirtualBox:/usr/local/kafka/kafka_2.12-2.3.0$** bin/kafka-server-start.sh config/server.properties
