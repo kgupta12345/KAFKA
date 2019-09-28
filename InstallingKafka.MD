@@ -13,6 +13,8 @@ STEP#4:
 **Now start the Kafka server/broker:**
 **rahul@rahul-VirtualBox:/usr/local/kafka/kafka_2.12-2.3.0$** bin/kafka-server-start.sh config/server.properties
 
+![Capture1](https://user-images.githubusercontent.com/45539698/65813431-bc5c1f80-e1f2-11e9-8336-085dfe065312.JPG)
+
 
 
 
