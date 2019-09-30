@@ -29,3 +29,8 @@ CHANGES IN SBIN:
 JAVA_HOME=/usr/local/java/jdk1.8.0_211
 SPARK_MASTER_HOST=localhost
 SPARK_MASTER_PORT=7077
+
+
+YARN_CONF_DIR=/usr/local/hadoop/hadoop-3.2.0/etc/hadoop
+
+YARN_CONF_DIR=/usr/local/hadoop/hadoop-3.2.0/etc/hadoop
