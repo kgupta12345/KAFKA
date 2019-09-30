@@ -14,3 +14,18 @@ spark-submit \
   1000
 
 make changes in the spark-env master and port
+
+
+CHANGES IN CONF:
+/usr/local/spark/spark-2.3.4-bin-hadoop2.7/conf/spark-defaults.conf.sh
+spark.master                     spark://localhost:7077
+
+
+
+
+CHANGES IN SBIN:
+/usr/local/spark/spark-2.3.4-bin-hadoop2.7/conf/spark-env.sh
+
+JAVA_HOME=/usr/local/java/jdk1.8.0_211
+SPARK_MASTER_HOST=localhost
+SPARK_MASTER_PORT=7077
