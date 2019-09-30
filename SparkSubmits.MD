@@ -33,4 +33,9 @@ SPARK_MASTER_PORT=7077
 
 YARN_CONF_DIR=/usr/local/hadoop/hadoop-3.2.0/etc/hadoop
 
-YARN_CONF_DIR=/usr/local/hadoop/hadoop-3.2.0/etc/hadoop
+HADOOP_CONF_DIR=/usr/local/hadoop/hadoop-3.2.0/etc/hadoop
+
+spark-shell --master yarn
+
+
+spark-shell --master spark://localhost:7077
