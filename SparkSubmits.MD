@@ -31,7 +31,9 @@ LOCAL MODE:
  
  
  
- 
+ Check SPARK MASTER UI 
+ Check YARN UI 
+ NOTHING ON SPARKUI 
   
  
  
@@ -46,7 +48,9 @@ LOCAL MODE:
 spark-submit   --class org.apache.spark.examples.SparkPi   --master spark://localhost:7077   --executor-memory 20G   --total-executor-cores 100   /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar 1000
 
  
- 
+ Check SPARK MASTER UI 
+ Check YARN UI 
+ NOTHING ON SPARKUI 
   
  
  
@@ -60,7 +64,9 @@ spark-submit   --class org.apache.spark.examples.SparkPi   --master spark://loca
  FIRE: 
 spark-submit   --class org.apache.spark.examples.SparkPi   --master spark://localhost:7077   --executor-memory 20G   --total-executor-cores 100   /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar 1000
 
- 
+ Check SPARK MASTER UI :)
+ Check YARN UI :)
+ NOTHING ON SPARKUI :)
  
  
  
@@ -72,11 +78,11 @@ NOW CHECK: SPARK MASTER UI
 TO CHECK: YARN UI
  =============================================================================================================================
 TO EXPERIMENT:
-Open spark-shell in yarn mode (spark-shell --master yarn) and then do spark read then check SPARKUI , SPARK MASTER UI & YARN UI
-Open spark-shell in master mode (spark-shell --master spark://localhost:7077) and then do spark read then check SPARKUI ,SPARK MASTER UI & YARN UI
 
+
+spark-submit   --class org.apache.spark.examples.SparkPi   --master yarn   --executor-memory 20G   --total-executor-cores 100   /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar 1000
+ 
  =============================================================================================================================
  
  
- spark-submit   --class org.apache.spark.examples.SparkPi   --master yarn   --executor-memory 20G   --total-executor-cores 100   /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar 1000
  
