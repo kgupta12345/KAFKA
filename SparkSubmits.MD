@@ -37,7 +37,7 @@ LOCAL MODE:
   
  
  
- ======================================================================
+ =====================XXXXXX=================================================
  STANDALONE MODE:
  
  START:  spark-shell --master spark://localhost:7077
@@ -45,7 +45,7 @@ LOCAL MODE:
  NEW TERMIANL, GOTO PATH: /usr/local/spark/spark-2.3.4-bin-hadoop2.7/
  
  FIRE:  
-spark-submit   --class org.apache.spark.examples.SparkPi   --master spark://localhost:7077   --executor-memory 20G   --total-executor-cores 100   /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar 1000
+spark-submit   --class org.apache.spark.examples.SparkPi   --master spark://localhost:7077   --executor-memory 20G   --total-executor-cores 100   /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar 100
 
  
  Check SPARK MASTER UI 
@@ -54,7 +54,7 @@ spark-submit   --class org.apache.spark.examples.SparkPi   --master spark://loca
   
 
  
- ======================================================================
+ =======================XXXXXX===============================================
  YARN MODE:
  
  START:  spark-shell --master yarn
