@@ -1,7 +1,7 @@
 YARN: http://localhost:8088/cluster
 HADOOPUI: http://localhost:9870/dfshealth.html#tab-overview
 SPARKUI: http://localhost:4040/jobs/
- 
+SPARK MASTER UI: http://10.0.2.15:8080/ 
  ======================================================================
 
 CHANGES IN CONF[spark-defaults.conf.sh]:
@@ -64,10 +64,19 @@ spark-submit   --class org.apache.spark.examples.SparkPi   --master spark://loca
  
  
  
- ======================================================================
+ =================================================================================================================
+scala> spark.read.format("csv").option("header","true").load("file:///home/rahul/JustFolder/air*")
+scala> res1.show
+NOW CHECK: SPARK UI
+NOW CHECK: SPARK MASTER UI
+TO CHECK: YARN UI
+ =================================================================================================================
+TO EXPERIMENT:
+Open spark-shell in yarn mode (spark-shell --master yarn) and then do spark read then check SPARKUI , SPARK MASTER UI & YARN UI
+Open spark-shell in master mode (spark-shell --master spark://localhost:7077) and then do spark read then check SPARKUI ,SPARK MASTER UI & YARN UI
+
+ =================================================================================================================
  
-
-
-
-
-
+ 
+ 
+ 
