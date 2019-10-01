@@ -1,7 +1,7 @@
 YARN: http://localhost:8088/cluster
 HADOOPUI: http://localhost:9870/dfshealth.html#tab-overview
 SPARKUI: http://localhost:4040/jobs/
-SPARK MASTER UI: http://10.0.2.15:8080/ 
+SPARK MASTER UI: http://localhost:8080/ 
  ======================================================================
 
 CHANGES IN CONF[spark-defaults.conf.sh]:
@@ -31,9 +31,9 @@ LOCAL MODE:
  
  
  
- NOTHING ON SPARK MASTER UI :)
- NOTHING ON YARN UI :)
- NOTHING ON SPARKUI :)
+ NOTHING ON SPARK MASTER UI  H: Should not be there
+ NOTHING ON YARN UI H: Should not be there
+ NOTHING ON SPARKUI H: Should not  be there
   
  
  
