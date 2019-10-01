@@ -1,0 +1,11 @@
+server.port = 9090
+
+spring.datasource.url=jdbc:mysql://mysqlcontainer/dev
+spring.datasource.username=root
+spring.datasource.password=root
+spring.datasource.driver-class-name=com.mysql.jdbc.Driver
+
+
+docker run -p 9090:9090 --link mysqlcontainer:mysqlcontainer springbootdockermysqldocker 
+
+   
