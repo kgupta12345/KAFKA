@@ -27,13 +27,13 @@ LOCAL MODE:
  
  NEW TERMINAL, GOTO PATH: /usr/local/spark/spark-2.3.4-bin-hadoop2.7/
  
- FIRE: spark-submit   --class org.apache.spark.examples.SparkPi   --master local[8]   /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar   1000
+ FIRE: spark-submit   --class org.apache.spark.examples.SparkPi   --master local[8]   /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar   100
  
  
  
- Check SPARK MASTER UI 
- Check YARN UI 
- NOTHING ON SPARKUI 
+ NOTHING ON SPARK MASTER UI :)
+ NOTHING ON YARN UI :)
+ NOTHING ON SPARKUI :)
   
  
  
@@ -52,7 +52,7 @@ spark-submit   --class org.apache.spark.examples.SparkPi   --master spark://loca
  Check YARN UI 
  NOTHING ON SPARKUI 
   
- 
+
  
  ======================================================================
  YARN MODE:
