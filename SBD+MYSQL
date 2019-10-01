@@ -9,3 +9,4 @@ spring.datasource.driver-class-name=com.mysql.jdbc.Driver
 docker run -p 9090:9090 --link mysqlcontainer:mysqlcontainer springbootdockermysqldocker 
 
    
+chnage the port in docker file
