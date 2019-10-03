@@ -2,9 +2,15 @@ YARN: http://localhost:8088/cluster
 HADOOPUI: http://localhost:9870/dfshealth.html#tab-overview
 SPARKUI: http://localhost:4040/jobs/
 SPARK MASTER UI: http://localhost:8080/ 
+
 ======================================================================
 
 START: HADOOP
+
+START: SPARK CLUSTER FOR S/A MODE
+cd /usr/local/spark/spark-2.3.4-bin-hadoop2.7/sbin/
+./usr/local/spark/spark-2.3.4-bin-hadoop2.7/sbin/start-all.sh
+
 --------------
 LOCAL MODE:
 
@@ -12,8 +18,8 @@ LOCAL MODE:
 START: spark-shell
  
 YARN (http://localhost:8088/cluster)- Launches |Because Hadoop is Running | No Activity
-SPARKUI(http://localhost:4040/jobs/) - Laucnches | Becasue spark-shell is running | No Activity
-SPARK MASTER UI (http://localhost:8080/) - Does Not Launches | spark-shell has been stared with local mode not master mode | No Activity
+SPARKUI(http://localhost:4040/jobs/) - Laucnches | Becasue spark-shell is running | No Activity happened
+SPARK MASTER UI (http://localhost:8080/) -  No Activity
  
  
 NEW TERMINAL: cd /usr/local/spark/spark-2.3.4-bin-hadoop2.7/
@@ -21,7 +27,7 @@ NEW TERMINAL: cd /usr/local/spark/spark-2.3.4-bin-hadoop2.7/
 FIRE: spark-submit   --class org.apache.spark.examples.SparkPi   --master local[8]   /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar   100
  
 YARN (http://localhost:8088/cluster)-  No Activity
-SPARKUI(http://localhost:4040/jobs/) - No Activity | http://localhost:4041/jobs/ | Activity happening
+SPARKUI(http://localhost:4040/jobs/) - No Activity | http://localhost:4041/jobs/ --->  Activity happen(ing)
 SPARK MASTER UI (http://localhost:8080/) -  No Activity
  
 SPARK-SHELL TERMINAL:
@@ -31,13 +37,14 @@ scala> res1.show
  
   
 YARN (http://localhost:8088/cluster)-  No Activity
-SPARKUI(http://localhost:4040/jobs/) -  Activity happening
+SPARKUI(http://localhost:4040/jobs/) -  Activity happened
 SPARK MASTER UI (http://localhost:8080/) -  No Activity
  
  ======================================================================
  STANDALONE MODE:
- 
- startall.sh then
+
+
+
 START:  spark-shell --master spark://localhost:7077
  
 YARN (http://localhost:8088/cluster)-  
@@ -50,9 +57,9 @@ FIRE:
 spark-submit   --class org.apache.spark.examples.SparkPi   --master spark://localhost:7077   --executor-memory 20G   --total-executor-cores 100   /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar 100
 
  
-YARN (http://localhost:8088/cluster)-  
+YARN (http://localhost:8088/cluster)-  No Activity
 SPARKUI(http://localhost:4040/jobs/) -  
-SPARK MASTER UI (http://localhost:8080/) -  
+SPARK MASTER UI (http://localhost:8080/) -  Activity happened
   
 SPARK-SHELL TERMINAL:
 
