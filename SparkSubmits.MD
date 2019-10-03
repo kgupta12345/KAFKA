@@ -79,11 +79,11 @@ SPARK MASTER UI (http://localhost:8080/) - No Activity
 START:  spark-shell --master yarn
  
  
-YARN (http://localhost:8088/cluster)-  
-SPARKUI(http://localhost:4040/jobs/) -  
-SPARK MASTER UI (http://localhost:8080/) -  
+YARN (http://localhost:8088/cluster)-  Activity Launched on YARN UI
+SPARKUI(http://localhost:4040/jobs/) -  Launches | No activity logged 
+SPARK MASTER UI (http://localhost:8080/) -  No Activity   
  
-NEW TERMIANL, cd /usr/local/spark/spark-2.3.4-bin-hadoop2.7/
+NEW TERMIANL
  
 FIRE:  
 spark-submit   --class org.apache.spark.examples.SparkPi   --master yarn   --executor-memory 20G   --total-executor-cores 100   /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar 100
