@@ -37,6 +37,7 @@ SPARK MASTER UI (http://localhost:8080/) -  No Activity
  ======================================================================
  STANDALONE MODE:
  
+ startall.sh then
 START:  spark-shell --master spark://localhost:7077
  
 YARN (http://localhost:8088/cluster)-  
