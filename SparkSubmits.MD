@@ -9,7 +9,7 @@ START: HADOOP
 
 START: SPARK CLUSTER FOR S/A MODE
 cd /usr/local/spark/spark-2.3.4-bin-hadoop2.7/sbin/
-./usr/local/spark/spark-2.3.4-bin-hadoop2.7/sbin/start-all.sh
+./start-all.sh
 
 --------------
 LOCAL MODE:
