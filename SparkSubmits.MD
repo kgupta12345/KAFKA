@@ -37,7 +37,7 @@ scala> res1.show
  
   
 YARN (http://localhost:8088/cluster)-  No Activity
-SPARKUI(http://localhost:4040/jobs/) -  Activity happened
+SPARKUI(http://localhost:4040/jobs/) - *******************************
 SPARK MASTER UI (http://localhost:8080/) -  No Activity
  
  ======================================================================
@@ -47,18 +47,18 @@ SPARK MASTER UI (http://localhost:8080/) -  No Activity
 
 START:  spark-shell --master spark://localhost:7077
  
-YARN (http://localhost:8088/cluster)-  
-SPARKUI(http://localhost:4040/jobs/) -  
-SPARK MASTER UI (http://localhost:8080/) -  
+YARN (http://localhost:8088/cluster)-  No Activity
+SPARKUI(http://localhost:4040/jobs/) -   **************************
+SPARK MASTER UI (http://localhost:8080/) -  Activity happened
  
 NEW TERMIANL, cd /usr/local/spark/spark-2.3.4-bin-hadoop2.7/
  
 FIRE:  
-spark-submit   --class org.apache.spark.examples.SparkPi   --master spark://localhost:7077   --executor-memory 20G   --total-executor-cores 100   /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar 100
+spark-submit   --class org.apache.spark.examples.SparkPi   --master spark://localhost:7077   --executor-memory 20G   --total-executor-cores 100   /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar 2000
 
  
 YARN (http://localhost:8088/cluster)-  No Activity
-SPARKUI(http://localhost:4040/jobs/) -  
+SPARKUI(http://localhost:4040/jobs/) -  No Activity | http://localhost:4042/jobs/ --->  Activity happen(ing)
 SPARK MASTER UI (http://localhost:8080/) -  Activity happened
   
 SPARK-SHELL TERMINAL:
