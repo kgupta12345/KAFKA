@@ -2,42 +2,40 @@ YARN: http://localhost:8088/cluster
 HADOOPUI: http://localhost:9870/dfshealth.html#tab-overview
 SPARKUI: http://localhost:4040/jobs/
 SPARK MASTER UI: http://localhost:8080/ 
- ======================================================================
+======================================================================
 
-CHANGES IN CONF[spark-defaults.conf.sh]:
-PATH: /usr/local/spark/spark-2.3.4-bin-hadoop2.7/conf/spark-defaults.conf.sh
-
-spark.master                     spark://localhost:7077
-
------------------------------------------------------------------------
-
-CHANGES IN CONF[spark-env.sh]:
-PATH: /usr/local/spark/spark-2.3.4-bin-hadoop2.7/conf/spark-env.sh
-
-JAVA_HOME=/usr/local/java/jdk1.8.0_211
-SPARK_MASTER_HOST=localhost
-SPARK_MASTER_PORT=7077
-YARN_CONF_DIR=/usr/local/hadoop/hadoop-3.2.0/etc/hadoop
-HADOOP_CONF_DIR=/usr/local/hadoop/hadoop-3.2.0/etc/hadoop
-
-=======================================================================
+START: HADOOP
+--------------
 LOCAL MODE:
+
+
+START: spark-shell
  
- START: spark-shell
+YARN (http://localhost:8088/cluster)- Launches |Because Hadoop is Running | No Activity
+SPARKUI(http://localhost:4040/jobs/) - Laucnches | Becasue spark-shell is running | No Activity
+SPARK MASTER UI (http://localhost:8080/) - Does Not Launches | spark-shell has been stared with local mode not master mode | No Activity
  
- NEW TERMINAL, GOTO PATH: /usr/local/spark/spark-2.3.4-bin-hadoop2.7/
+ 
+ NEW TERMINAL: cd /usr/local/spark/spark-2.3.4-bin-hadoop2.7/
  
  FIRE: spark-submit   --class org.apache.spark.examples.SparkPi   --master local[8]   /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar   100
  
+YARN (http://localhost:8088/cluster)-  No Activity
+SPARKUI(http://localhost:4040/jobs/) - No Activity | http://localhost:4041/jobs/ | Activity happening
+SPARK MASTER UI (http://localhost:8080/) -  No Activity
+ 
+ SPARK-SHELL TERMINAL:
+ 
+scala> spark.read.format("csv").option("header","true").load("file:///home/rahul/JustFolder/air*")
+scala> res1.show
  
  
- NOTHING ON SPARK MASTER UI  H: Should not be there
- NOTHING ON YARN UI H: Should not be there
- NOTHING ON SPARKUI H: Should not  be there
   
+YARN (http://localhost:8088/cluster)-  No Activity
+SPARKUI(http://localhost:4040/jobs/) -  Activity happening
+SPARK MASTER UI (http://localhost:8080/) -  No Activity
  
- 
- =====================XXXXXX=================================================
+ ======================================================================
  STANDALONE MODE:
  
  START:  spark-shell --master spark://localhost:7077
@@ -54,7 +52,7 @@ spark-submit   --class org.apache.spark.examples.SparkPi   --master spark://loca
   
 
  
- =======================XXXXXX===============================================
+ ======================================================================
  YARN MODE:
  
  START:  spark-shell --master yarn
