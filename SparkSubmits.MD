@@ -24,10 +24,10 @@ SPARK MASTER UI (http://localhost:8080/) -  No Activity
  
 NEW TERMINAL: cd /usr/local/spark/spark-2.3.4-bin-hadoop2.7/
  
-FIRE: spark-submit   --class org.apache.spark.examples.SparkPi   --master local[8]   /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar   100
+FIRE: spark-submit   --class org.apache.spark.examples.SparkPi   --master local[8]   /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar   1000
  
 YARN (http://localhost:8088/cluster)-  No Activity
-SPARKUI(http://localhost:4040/jobs/) - No Activity | http://localhost:4041/jobs/ --->  Activity happen(ing)
+SPARKUI(http://localhost:4040/jobs/) - No Activity | http://localhost:4041/jobs/ --->  Activity logging(ing) |After the execution is completed the URL http://localhost:4041/jobs/ is not more active.
 SPARK MASTER UI (http://localhost:8080/) -  No Activity
  
 SPARK-SHELL TERMINAL:
@@ -37,7 +37,7 @@ scala> res1.show
  
   
 YARN (http://localhost:8088/cluster)-  No Activity
-SPARKUI(http://localhost:4040/jobs/) - *******************************
+SPARKUI(http://localhost:4040/jobs/) - Activity (spark reaad and show) logged
 SPARK MASTER UI (http://localhost:8080/) -  No Activity
  
  ======================================================================
