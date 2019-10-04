@@ -1,7 +1,10 @@
 Few Kafka Operations:
 
 SUMMARY:
-./kafka-topics.sh --describe --zookeeper localhost:2181 --topic topic_name
+./kafka-topics.sh --describe --zookeeper localhost:2181 --topic topica
 
 LIST ALL BROKERS
 ./bin/zookeeper-shell.sh localhost:2181 ls /brokers/ids
+
+
+sh kafka-topics.sh --describe --zookeeper localhost:2181 --topic topica | awk '{print $2}' | uniq -c |awk 'NR==2{print "count of partitions=" $1}'
