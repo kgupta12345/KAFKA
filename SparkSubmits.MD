@@ -79,7 +79,7 @@ SPARK MASTER UI (http://localhost:8080/) - No Activity
 START:  spark-shell --master yarn
  
  
-YARN (http://localhost:8088/cluster)-  Activity Launched on YARN UI
+YARN (http://localhost:8088/cluster)-  Activity logged on YARN UI
 SPARKUI(http://localhost:4040/jobs/) -  Launches | No activity logged 
 SPARK MASTER UI (http://localhost:8080/) -  No Activity   
  
@@ -88,10 +88,12 @@ NEW TERMIANL
 FIRE:  
 spark-submit   --class org.apache.spark.examples.SparkPi   --master yarn   --executor-memory 20G   --total-executor-cores 100   /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar 100
 
+
+spark-submit   --class org.apache.spark.examples.SparkPi   --master yarn  /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar 100
  
-YARN (http://localhost:8088/cluster)-  
-SPARKUI(http://localhost:4040/jobs/) -  
-SPARK MASTER UI (http://localhost:8080/) -  
+YARN (http://localhost:8088/cluster)-  XXXXXXXXXXXXXXX
+SPARKUI(http://localhost:4040/jobs/) -  XXXXXXXXXXXXXXX
+SPARK MASTER UI (http://localhost:8080/) -  XXXXXXXXXXXXXXX
   
 SPARK-SHELL TERMINAL:
 
@@ -99,9 +101,9 @@ scala> spark.read.format("csv").option("header","true").load("file:///home/rahul
 scala> res1.show
  
  
-YARN (http://localhost:8088/cluster)-  
-SPARKUI(http://localhost:4040/jobs/) -  
-SPARK MASTER UI (http://localhost:8080/) -  
+YARN (http://localhost:8088/cluster)-  No Activity
+SPARKUI(http://localhost:4040/jobs/) -  Activity (spark reaad and show) logged
+SPARK MASTER UI (http://localhost:8080/) - No Activity    
  
  
 =============================================================================================================================
