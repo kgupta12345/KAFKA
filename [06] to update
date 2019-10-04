@@ -1,0 +1,1 @@
+kubectl delete --all pods --namespace=foo --force --garce-period=0
