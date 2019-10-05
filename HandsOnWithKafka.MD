@@ -31,9 +31,8 @@
 ##### STEP#2: Start Zookeeper
 ```
 [1] Navigate cd /usr/local/kafka/kafka_2.12-2.3.0
-[2] Start Zookeeper:
-    bin/zookeeper-server-start.sh config/zookeeper.properties 
-[3] Zookeeper starts at port 2181   
+[2] Execute: bin/zookeeper-server-start.sh config/zookeeper.properties 
+[3] Zookeeper started on port 2181   
 ```
 *Zookeeper starts at port 2181*
 ![image](https://user-images.githubusercontent.com/45539698/66250650-2892d200-e763-11e9-9a29-2255515a6c16.png)
@@ -42,11 +41,11 @@
 ##### STEP#3: Create & Start Multiple Brokers:
 ```
 [1] Navigate cd /usr/local/kafka/kafka_2.12-2.3.0/config
-[2] Create multiple Brokers:
+[2] Now, create multiple Brokers:
     cp server.propertiess server-1.properties
     cp server.propertiess server-2.properties
     cp server.propertiess server-3.properties
-[3] Now edit the below properties in the above files:
+[3] Now edit the below properties in the above broker files:
     - sudo gedit server.properties
     - broker.id=0
     - listeners=PLAINTEXT://:9090
@@ -67,15 +66,20 @@
     - listeners=PLAINTEXT://:9093
     - log.dirs=/tmp/kafka-logs-3
     --------------------------------
-[4] start all four Brokers:    
-    
-
+[4] Start all four Brokers.
+    - Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0/
+    - Execute: bin/kafka-server-start.sh config/server.properties &
+    - Execute: bin/kafka-server-start.sh config/server-1.properties &
+    - Execute: bin/kafka-server-start.sh config/server-2.properties &
+    - Execute: bin/kafka-server-start.sh config/server-3.properties &
+[5] Check if all brokers are running:
+    ./bin/zookeeper-shell.sh localhost:2181 ls /brokers/ids
 ```
 
 ##### STEP#4: Create Topic
 ```
-cd /usr/local/kafka/kafka_2.12-2.3.0
-
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
+[2] Execute: bin/kafka-topics.sh --zookeeper localhost:2181 --create --topic demotopic --replication-factor 4 --partitions 3 
 ```
 
 ##### STEP#5: Create Producer
@@ -85,22 +89,7 @@ cd /usr/local/kafka/kafka_2.12-2.3.0
 ```
 ```
 
-**Zookeeper starts at port 2181**
-![image](https://user-images.githubusercontent.com/45539698/65813293-02b07f00-e1f1-11e9-8921-09815b43ab47.png)
 
-
-**Now start the Kafka server/broker service. It starts @ 9092:**
-**rahul@rahul-VirtualBox:/usr/local/kafka/kafka_2.12-2.3.0$** bin/kafka-server-start.sh config/server.properties
-
-![Capture1](https://user-images.githubusercontent.com/45539698/65813431-bc5c1f80-e1f2-11e9-8336-085dfe065312.JPG)
-
-
-
-
-**Now Let's create a Topic:**
-
-bin/kafka-topics.sh --zookeeper localhost:2181 --create --topic demotopic --replication-factor 1 --partitions 2 
-As we have 1 server/broker running, therefore both the partitions are created on te single server/broker.
 
 **Producer-Consumer Interacting with Server/Broker
 
