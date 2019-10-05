@@ -84,6 +84,10 @@
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/kafka-topics.sh --zookeeper localhost:2181 --create --topic topic1 --replication-factor 4 --partitions 3 
 ```
+<code>
+     bin/kafka-topics.sh --list --zookeeper localhost:2181
+
+    </code>
 
 ##### STEP#5: Create Producer
 ```
