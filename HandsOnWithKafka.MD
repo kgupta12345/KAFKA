@@ -99,6 +99,13 @@
 
 ![image](https://user-images.githubusercontent.com/45539698/66251066-52e78e00-e769-11e9-8e6e-2fb3728638f8.png)
 
-*WHAT IF*
+*WHAT IF*  </br>
  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic someothertopic --from-beginning
 ![image](https://user-images.githubusercontent.com/45539698/65813241-363ed980-e1f0-11e9-8806-a4fd584ab632.png)
+
+
+*SUMMARY* </br>
+```
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0/bin
+[2] Execute: ./kafka-topics.sh --describe --zookeeper localhost:2181 --topic topic1
+```
