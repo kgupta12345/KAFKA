@@ -110,7 +110,7 @@
 [2] Execute: ./kafka-topics.sh --describe --zookeeper localhost:2181 --topic topic1
 ```
 ![image](https://user-images.githubusercontent.com/45539698/66251615-bb396e00-e76f-11e9-9285-3a9b240cf51d.png)
-*(SIMILAR)PICTORIAL REPRESENTATION*
+*(SIMILAR) PICTORIAL REPRESENTATION*
 ![image](https://user-images.githubusercontent.com/45539698/66251920-52ec8b80-e773-11e9-8f60-876385469d94.png)
 
 ##### STEP#8: Testing with KAFKA-CONNECT:
@@ -126,5 +126,6 @@ OBSERVATION: The data in souce.txt has been moved into destination.txt.
 NOTE: If you keep adding stuff in source.txt, the changes wont reflect in real time on destination.txt.
     
   ```  
-  *TO VIEW THE DATA ON TOPIC*
+  *TO VIEW THE DATA ON TOPIC* </br>
+  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic <TOPIC-NAME> --from-beginning
   ![image](https://user-images.githubusercontent.com/45539698/66253162-67378500-e781-11e9-8acf-10203f937f01.png)
