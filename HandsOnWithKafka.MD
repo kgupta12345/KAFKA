@@ -76,8 +76,10 @@
     - Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0/
     - Execute: ./bin/zookeeper-shell.sh localhost:2181 ls /brokers/ids
 ```
-*List of all Brokers* </br>
+<code>
+List of all Brokers:
 ![image](https://user-images.githubusercontent.com/45539698/66250957-62fe6e00-e767-11e9-928d-19b88e9070aa.png)
+</code>
 
 ##### STEP#4: Create Topic
 ```
