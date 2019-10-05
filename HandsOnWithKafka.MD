@@ -86,8 +86,7 @@
 ```
 <code>
      bin/kafka-topics.sh --list --zookeeper localhost:2181
-
-    </code>
+</code>
 
 ##### STEP#5: Create Producer
 ```
