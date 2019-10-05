@@ -78,8 +78,8 @@
 ```
 <code>
 List of all Brokers: </br>
-[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
-[2] 
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0 </br>
+[2] </br>
 </code>
 
 ![image](https://user-images.githubusercontent.com/45539698/66250957-62fe6e00-e767-11e9-928d-19b88e9070aa.png)
@@ -92,8 +92,8 @@ List of all Brokers: </br>
 ```
 <code>
 List of all Topics: </br>
-[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
-[2] Execute: bin/kafka-topics.sh --list --zookeeper localhost:2181
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0 </br>
+[2] Execute: bin/kafka-topics.sh --list --zookeeper localhost:2181 </br>
 </code>
 
 
