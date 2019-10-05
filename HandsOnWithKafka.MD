@@ -35,7 +35,7 @@ bin/zookeeper-server-start.sh config/zookeeper.properties
 
 ```
 **Zookeeper starts at port 2181**
-![image](https://user-images.githubusercontent.com/45539698/65813293-02b07f00-e1f1-11e9-8921-09815b43ab47.png)
+![image](https://user-images.githubusercontent.com/45539698/66250650-2892d200-e763-11e9-9a29-2255515a6c16.png)
 
 
 ##### STEP#3: Create & Start Multiple Brokers:
