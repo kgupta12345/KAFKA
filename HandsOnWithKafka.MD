@@ -77,9 +77,10 @@
     - Execute: ./bin/zookeeper-shell.sh localhost:2181 ls /brokers/ids
 ```
 <code>
-List of all Brokers:
-![image](https://user-images.githubusercontent.com/45539698/66250957-62fe6e00-e767-11e9-928d-19b88e9070aa.png)
+List of all Brokers: </br>
 </code>
+![image](https://user-images.githubusercontent.com/45539698/66250957-62fe6e00-e767-11e9-928d-19b88e9070aa.png)
+
 
 ##### STEP#4: Create Topic
 ```
