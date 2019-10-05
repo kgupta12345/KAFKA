@@ -34,7 +34,7 @@
 [2] Execute: bin/zookeeper-server-start.sh config/zookeeper.properties 
 [3] Zookeeper started on port 2181   
 ```
-*Zookeeper starts at port 2181*
+*Zookeeper started on port 2181*
 ![image](https://user-images.githubusercontent.com/45539698/66250650-2892d200-e763-11e9-9a29-2255515a6c16.png)
 
 
@@ -75,11 +75,13 @@
 [5] Check if all brokers are running:
     ./bin/zookeeper-shell.sh localhost:2181 ls /brokers/ids
 ```
+*List of all Brokers*
+![image](https://user-images.githubusercontent.com/45539698/66250957-62fe6e00-e767-11e9-928d-19b88e9070aa.png)
 
 ##### STEP#4: Create Topic
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
-[2] Execute: bin/kafka-topics.sh --zookeeper localhost:2181 --create --topic demotopic --replication-factor 4 --partitions 3 
+[2] Execute: bin/kafka-topics.sh --zookeeper localhost:2181 --create --topic topicone --replication-factor 4 --partitions 3 
 ```
 
 ##### STEP#5: Create Producer
