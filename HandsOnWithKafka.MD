@@ -114,4 +114,13 @@
 ![image](https://user-images.githubusercontent.com/45539698/66251920-52ec8b80-e773-11e9-8f60-876385469d94.png)
 
 ##### STEP#8: Testing with KAFKA-CONNECT:
-
+    -Create a source file [Any location | With Permissions | With some data].
+    -Create a blank file [Any location | With Permissions]
+    -Give the path of source file in /usr/local/kafka/kafka_2.12-2.3.0/config/connect-file-source.properties
+    -Give the path of destination file in /usr/local/kafka/kafka_2.12-2.3.0/config/connect-file-sink.properties
+    -Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0/
+    -Execute: bin/connect-standalone.sh config/connect-standalone.properties config/connect-file-source.properties config/connect-file-sink.properties
+    - Observe the data in souce.txt has been moved into destination.txt.
+    -NOTE: If you keep adding stuff in source.txt, the changes wont reflect in real time on destination.txt.
+    
+    
