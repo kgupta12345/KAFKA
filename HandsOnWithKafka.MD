@@ -78,6 +78,8 @@
 ```
 <code>
 List of all Brokers: </br>
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
+[2] 
 </code>
 
 ![image](https://user-images.githubusercontent.com/45539698/66250957-62fe6e00-e767-11e9-928d-19b88e9070aa.png)
@@ -89,8 +91,12 @@ List of all Brokers: </br>
 [2] Execute: bin/kafka-topics.sh --zookeeper localhost:2181 --create --topic topic1 --replication-factor 4 --partitions 3 
 ```
 <code>
-     bin/kafka-topics.sh --list --zookeeper localhost:2181
+List of all Topics: </br>
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
+[2] Execute: bin/kafka-topics.sh --list --zookeeper localhost:2181
 </code>
+
+
 
 ##### STEP#5: Create Producer
 ```
