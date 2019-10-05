@@ -76,12 +76,11 @@
     - Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0/
     - Execute: ./bin/zookeeper-shell.sh localhost:2181 ls /brokers/ids
 ```
-<code>
-List of all Brokers: </br>
+###### List of all Brokers: </br>
+```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0 </br>
-[2] </br>
-</code>
-
+[2] Execute: ./bin/zookeeper-shell.sh localhost:2181 ls /brokers/ids
+```
 ![image](https://user-images.githubusercontent.com/45539698/66250957-62fe6e00-e767-11e9-928d-19b88e9070aa.png)
 
 
@@ -90,11 +89,14 @@ List of all Brokers: </br>
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/kafka-topics.sh --zookeeper localhost:2181 --create --topic topic1 --replication-factor 4 --partitions 3 
 ```
-<code>
-List of all Topics: </br>
-[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0 </br>
-[2] Execute: bin/kafka-topics.sh --list --zookeeper localhost:2181 </br>
-</code>
+
+###### List of all Topics: </br>
+```
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0 
+[2] Execute: bin/kafka-topics.sh --list --zookeeper localhost:2181 
+```
+![image](https://user-images.githubusercontent.com/45539698/66253375-e9757880-e784-11e9-9db5-25b55e471971.png)
+
 
 
 
