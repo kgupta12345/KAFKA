@@ -21,8 +21,8 @@
 ```
 ##### STEP#1: Download & Install kafka:
 ```
-[1] Download kafka_2.12-2.3.0.tgz
-[2] Extract kafka_2.12-2.3.0.tgz:
+[1] Download: kafka_2.12-2.3.0.tgz
+[2] Extract: kafka_2.12-2.3.0.tgz:
     kafka_2.12-2.3.0
 [3] Move Extracted folder (kafka_2.12-2.3.0) to a desired location. In my case I created /usr/local/kafka [with permissions]:
     mv kafka_2.12-2.3.0 /usr/local/kafka   
@@ -30,7 +30,7 @@
 ```
 ##### STEP#2: Start Zookeeper
 ```
-[1] Navigate cd /usr/local/kafka/kafka_2.12-2.3.0
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/zookeeper-server-start.sh config/zookeeper.properties 
 [3] Zookeeper started on port 2181   
 ```
@@ -40,7 +40,7 @@
 
 ##### STEP#3: Create & Start Multiple Brokers:
 ```
-[1] Navigate cd /usr/local/kafka/kafka_2.12-2.3.0/config
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0/config
 [2] Now, create multiple Brokers:
     cp server.propertiess server-1.properties
     cp server.propertiess server-2.properties
@@ -68,40 +68,36 @@
     --------------------------------
 [4] Start all four Brokers.
     - Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0/
-    - Execute: bin/kafka-server-start.sh config/server.properties &
-    - Execute: bin/kafka-server-start.sh config/server-1.properties &
-    - Execute: bin/kafka-server-start.sh config/server-2.properties &
-    - Execute: bin/kafka-server-start.sh config/server-3.properties &
+    - Execute: bin/kafka-server-start.sh config/server.properties 
+    - Execute: bin/kafka-server-start.sh config/server-1.properties 
+    - Execute: bin/kafka-server-start.sh config/server-2.properties 
+    - Execute: bin/kafka-server-start.sh config/server-3.properties 
 [5] Check if all brokers are running:
-    ./bin/zookeeper-shell.sh localhost:2181 ls /brokers/ids
+    - Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0/
+    - Execute: ./bin/zookeeper-shell.sh localhost:2181 ls /brokers/ids
 ```
-*List of all Brokers*
+*List of all Brokers* </br>
 ![image](https://user-images.githubusercontent.com/45539698/66250957-62fe6e00-e767-11e9-928d-19b88e9070aa.png)
 
 ##### STEP#4: Create Topic
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
-[2] Execute: bin/kafka-topics.sh --zookeeper localhost:2181 --create --topic topicone --replication-factor 4 --partitions 3 
+[2] Execute: bin/kafka-topics.sh --zookeeper localhost:2181 --create --topic topic1 --replication-factor 4 --partitions 3 
 ```
 
 ##### STEP#5: Create Producer
 ```
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
+[2] Execute: bin/kafka-console-producer.sh --broker-list localhost:9092 --topic topic1
 ```
 ##### STEP#6: Create Consumer
 ```
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
+[2] Execute:  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic topic1 --from-beginning
 ```
 
 
 
-**Producer-Consumer Interacting with Server/Broker
-
-**Now Let's create a Producer Application:**
-bin/kafka-console-producer.sh --broker-list localhost:9092 --topic demotopic
-
-**Now Let's create a Consumer Applictaion:**
- bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic demotopic --from-beginning
- 
- ![image](https://user-images.githubusercontent.com/45539698/65813234-18717480-e1f0-11e9-8440-ce24d5a239bb.png)
 
  **WHAT IF**
  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic someothertopic --from-beginning
