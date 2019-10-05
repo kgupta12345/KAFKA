@@ -110,3 +110,8 @@
 [2] Execute: ./kafka-topics.sh --describe --zookeeper localhost:2181 --topic topic1
 ```
 ![image](https://user-images.githubusercontent.com/45539698/66251615-bb396e00-e76f-11e9-9285-3a9b240cf51d.png)
+*(SIMILAR)PICTORIAL REPRESENTATION*
+![image](https://user-images.githubusercontent.com/45539698/66251920-52ec8b80-e773-11e9-8f60-876385469d94.png)
+
+##### STEP#8: Testing with KAFKA-CONNECT:
+
