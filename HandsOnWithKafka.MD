@@ -1,10 +1,62 @@
-STEP#0: Get Java
-STEP#1: Download kafka_2.12-2.3.0.tgz
-STEP#2: tar -xzf kafka_2.12-2.3.0.tgz
-STEP#3: cd kafka_2.12-2.3.0
-STEP#4: 
-**Start the zookeeper server ( it manages brokers on distributed system)**
-**rahul@rahul-VirtualBox:/usr/local/kafka/kafka_2.12-2.3.0$** bin/zookeeper-server-start.sh config/zookeeper.properties
+## Practical with Kafka
+
+##### STEP#0: Get Java8:
+
+```
+[1] Download jdk-8u221-linux-x64.tar.gz from the Official Website.
+[2] Extract jdk-8u221-linux-x64.tar.gz:
+    tar -xzvf jdk-8u221-linux-x64.tar.gz
+[3] Move Extracted folder (jdk1.8.0_221) to a desired location. In my case I created /usr/local/java [with permissions]:
+    mv jdk1.8.0_221 /usr/local/java
+[4] Open ~/.bashrc file to set the Environmental Varibles:
+    sudo gedit ~/.bashrc	
+[5] In the file, mention the below two lines (in the end):
+    export JAVA_HOME=/usr/local/java/jdk1.8.0_221
+    export PATH=$PATH:/usr/local/java/jdk1.8.0_221/bin
+[6] Save the file.
+[7] Publish the changes:
+    source ~/.bashrc
+[8] Check the Java Version: 
+    java -version
+```
+##### STEP#1: Download & Install kafka:
+```
+[1] Download kafka_2.12-2.3.0.tgz
+[2] Extract kafka_2.12-2.3.0.tgz:
+    kafka_2.12-2.3.0
+[3] Move Extracted folder (kafka_2.12-2.3.0) to a desired location. In my case I created /usr/local/kafka [with permissions]:
+    mv kafka_2.12-2.3.0 /usr/local/kafka   
+    
+```
+##### STEP#2: Start Zookeeper
+```
+cd /usr/local/kafka/kafka_2.12-2.3.0
+bin/zookeeper-server-start.sh config/zookeeper.properties 
+
+```
+**Zookeeper starts at port 2181**
+![image](https://user-images.githubusercontent.com/45539698/65813293-02b07f00-e1f1-11e9-8921-09815b43ab47.png)
+
+
+##### STEP#3: Create & Start Multiple Brokers:
+```
+cd /usr/local/kafka/kafka_2.12-2.3.0/config
+
+
+```
+
+##### STEP#4: Create Topic
+```
+cd /usr/local/kafka/kafka_2.12-2.3.0
+
+```
+
+##### STEP#5: Create Producer
+```
+```
+##### STEP#6: Create Consumer
+```
+```
 
 **Zookeeper starts at port 2181**
 ![image](https://user-images.githubusercontent.com/45539698/65813293-02b07f00-e1f1-11e9-8921-09815b43ab47.png)
