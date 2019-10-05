@@ -109,3 +109,4 @@
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0/bin
 [2] Execute: ./kafka-topics.sh --describe --zookeeper localhost:2181 --topic topic1
 ```
+![image](https://user-images.githubusercontent.com/45539698/66251615-bb396e00-e76f-11e9-9285-3a9b240cf51d.png)
