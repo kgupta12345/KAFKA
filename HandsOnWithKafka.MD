@@ -126,3 +126,5 @@ OBSERVATION: The data in souce.txt has been moved into destination.txt.
 NOTE: If you keep adding stuff in source.txt, the changes wont reflect in real time on destination.txt.
     
   ```  
+  *TO VIEW THE DATA ON TOPIC*
+  ![image](https://user-images.githubusercontent.com/45539698/66253162-67378500-e781-11e9-8acf-10203f937f01.png)
