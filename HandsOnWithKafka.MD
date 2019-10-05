@@ -30,18 +30,45 @@
 ```
 ##### STEP#2: Start Zookeeper
 ```
-cd /usr/local/kafka/kafka_2.12-2.3.0
-bin/zookeeper-server-start.sh config/zookeeper.properties 
-
+[1] Navigate cd /usr/local/kafka/kafka_2.12-2.3.0
+[2] Start Zookeeper:
+    bin/zookeeper-server-start.sh config/zookeeper.properties 
+[3] Zookeeper starts at port 2181   
 ```
-**Zookeeper starts at port 2181**
+*Zookeeper starts at port 2181*
 ![image](https://user-images.githubusercontent.com/45539698/66250650-2892d200-e763-11e9-9a29-2255515a6c16.png)
 
 
 ##### STEP#3: Create & Start Multiple Brokers:
 ```
-cd /usr/local/kafka/kafka_2.12-2.3.0/config
-
+[1] Navigate cd /usr/local/kafka/kafka_2.12-2.3.0/config
+[2] Create multiple Brokers:
+    cp server.propertiess server-1.properties
+    cp server.propertiess server-2.properties
+    cp server.propertiess server-3.properties
+[3] Now edit the below properties in the above files:
+    - sudo gedit server.properties
+    - broker.id=0
+    - listeners=PLAINTEXT://:9090
+    - log.dirs=/tmp/kafka-logs-0
+    --------------------------------
+    - sudo gedit server-1.properties
+    - broker.id=1
+    - listeners=PLAINTEXT://:9091
+    - log.dirs=/tmp/kafka-logs-1
+    --------------------------------
+    - sudo gedit server-2.properties
+    - broker.id=2
+    - listeners=PLAINTEXT://:9092
+    - log.dirs=/tmp/kafka-logs-2
+    --------------------------------
+    - sudo gedit server-3.properties
+    - broker.id=3
+    - listeners=PLAINTEXT://:9093
+    - log.dirs=/tmp/kafka-logs-3
+    --------------------------------
+[4] start all four Brokers:    
+    
 
 ```
 
