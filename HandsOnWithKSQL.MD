@@ -1,28 +1,22 @@
 ## Start KSQL
 
-1.  Clone the Confluent KSQL repository.
+##### STEP#1: Clone the Confluent KSQL repository:
 
-    ```bash
-    $ git clone git@github.com:confluentinc/ksql.git
-    ```
+```
+[1] Create a folder /usr/local/ksql/
+[2] Execute: git clone git@github.com:confluentinc/ksql.git
+```
 
-2.  Change directory to the `ksql` directory and compile the code.
+##### STEP#2: Maven Build:
 
-    ```bash
-    $ cd ksql
-    $ mvn clean compile install -DskipTests
-    ```
+```
+[1] Navigate: cd /usr/local/ksql/ksql
+[2] Execute: mvn clean compile install -DskipTests
+```
 
-3.  Start KSQL. The `local` argument starts KSQL in [standalone mode](/docs/concepts.md#modes-of-operation).
+##### STEP#3: Start KSQL:
 
-    ```bash
-    $ ./bin/ksql-cli local
-    ```
-
-    After KSQL is started, your terminal should resemble this.
-
-    ```bash
-    ksql>
-    ```
-
-See the steps below to generate data to the Kafka cluster.
+```
+[1] Navigage: cd /usr/local/ksql/ksql/bin
+[2] Execute: ./ksql
+```
