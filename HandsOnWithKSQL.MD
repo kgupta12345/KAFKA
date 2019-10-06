@@ -20,3 +20,5 @@
 [1] Navigage: cd /usr/local/ksql/ksql/bin
 [2] Execute: ./ksql
 ```
+![image](https://user-images.githubusercontent.com/45539698/66264490-c2ba4f00-e823-11e9-8d81-f1e091e27171.png)
+
