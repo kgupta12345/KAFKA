@@ -69,14 +69,18 @@
 [4] Start all four Brokers.
     - Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0/
     - Execute: bin/kafka-server-start.sh config/server.properties 
-    - Execute: bin/kafka-server-start.sh config/server-1.properties 
-    - Execute: bin/kafka-server-start.sh config/server-2.properties 
-    - Execute: bin/kafka-server-start.sh config/server-3.properties 
-[5] Check if all brokers are running:
+    
     - Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0/
-    - Execute: ./bin/zookeeper-shell.sh localhost:2181 ls /brokers/ids
+    - Execute: bin/kafka-server-start.sh config/server-1.properties 
+    
+    - Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0/  
+    - Execute: bin/kafka-server-start.sh config/server-2.properties 
+    
+    - Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0/ 
+    - Execute: bin/kafka-server-start.sh config/server-3.properties 
+
 ```
-###### List of all Brokers: </br>
+###### List/Check of all Brokers: </br>
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0 </br>
 [2] Execute: ./bin/zookeeper-shell.sh localhost:2181 ls /brokers/ids
