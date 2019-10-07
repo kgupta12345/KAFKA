@@ -48,22 +48,22 @@
 [3] Now edit the below properties in the above broker files:
     - sudo gedit server.properties
     - broker.id=0
-    - listeners=PLAINTEXT://:9090
+    - listeners=PLAINTEXT://:8080
     - log.dirs=/tmp/kafka-logs-0
     --------------------------------
     - sudo gedit server-1.properties
     - broker.id=1
-    - listeners=PLAINTEXT://:9091
+    - listeners=PLAINTEXT://:8081
     - log.dirs=/tmp/kafka-logs-1
     --------------------------------
     - sudo gedit server-2.properties
     - broker.id=2
-    - listeners=PLAINTEXT://:9092
+    - listeners=PLAINTEXT://:8082
     - log.dirs=/tmp/kafka-logs-2
     --------------------------------
     - sudo gedit server-3.properties
     - broker.id=3
-    - listeners=PLAINTEXT://:9093
+    - listeners=PLAINTEXT://:8083
     - log.dirs=/tmp/kafka-logs-3
     --------------------------------
 [4] Start all four Brokers.
