@@ -106,50 +106,55 @@
 ![image](https://user-images.githubusercontent.com/45539698/66333403-86d2d700-e954-11e9-8931-5118aa958cf6.png)
 
 
-#### STEP#5: Create Producer:
+#### STEP#5: Create Producer & Consumer:
+
+###### CASE#1: 
+Producer </br>
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/kafka-console-producer.sh --broker-list localhost:2181 --topic topic1
 ```
-
-```
-[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
-[2] Execute: bin/kafka-console-producer.sh --broker-list localhost:2181 --topic topic4
-```
-###### RESULTS: Topic Not Available:
-![image](https://user-images.githubusercontent.com/45539698/66336290-6dcd2480-e95a-11e9-987e-c8a4ceae9be3.png)
-
-```
-[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
-[2] Execute: bin/kafka-console-producer.sh --broker-list localhost:8082 --topic topic2
-```
-###### RESULTS: Waiting for another Input......
-```
-[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
-[2] Execute: bin/kafka-console-producer.sh --broker-list localhost:8082 --topic topic3
-```
-###### RESULTS: Topic Not Available:
-![image](https://user-images.githubusercontent.com/45539698/66336139-2777c580-e95a-11e9-9a88-94c71cbf9ca3.png)
-
-
-
-
-
-
-###### Or use Zookeeper | Example: server-2 running on 8082
-###### Or use any Broker/Server | Example: server-2 running on 8082
-###### Or use any Broker/Server | Example: server-2 running on 8082
-###### Or use any Broker/Server | Example: server-2 running on 8082
-###### Or use any Broker/Server | Example: server-2 running on 8082
-
-
-
-
-#### STEP#6: Create Consumer
+Consumer </br>
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute:  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic topic1 --from-beginning
 ```
+###### CASE#2: 
+Producer </br>
+```
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
+[2] Execute: bin/kafka-console-producer.sh --broker-list localhost:2181 --topic topic4
+```
+Consumer </br>
+```
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
+[2] Execute:  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic topic1 --from-beginning
+```
+###### CASE#3: 
+Producer </br>
+```
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
+[2] Execute: bin/kafka-console-producer.sh --broker-list localhost:8082 --topic topic2
+```
+Consumer </br>
+```
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
+[2] Execute:  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic topic1 --from-beginning
+```
+###### CASE#4: 
+Producer
+```
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
+[2] Execute: bin/kafka-console-producer.sh --broker-list localhost:8082 --topic topic3
+```
+Consumer
+```
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
+[2] Execute:  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic topic1 --from-beginning
+```
+
+
+
 #### STEP#7: Now send something from Producer and observe Consumer Terminal:
 
 ![image](https://user-images.githubusercontent.com/45539698/66251066-52e78e00-e769-11e9-8e6e-2fb3728638f8.png)
