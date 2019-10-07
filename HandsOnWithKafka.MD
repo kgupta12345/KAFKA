@@ -109,46 +109,52 @@
 #### STEP#5: Create Producer & Consumer:
 
 ###### CASE#1: 
-Producer </br>
+
 ```
+Producer:
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/kafka-console-producer.sh --broker-list localhost:2181 --topic topic1
 ```
-Consumer </br>
+
 ```
+Consumer :
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute:  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic topic1 --from-beginning
 ```
 ###### CASE#2: 
-Producer </br>
+
 ```
+Producer:
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/kafka-console-producer.sh --broker-list localhost:2181 --topic topic4
 ```
-Consumer </br>
 ```
+Consumer:
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute:  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic topic1 --from-beginning
 ```
+
 ###### CASE#3: 
-Producer </br>
+ 
 ```
+Producer:
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/kafka-console-producer.sh --broker-list localhost:8082 --topic topic2
 ```
-Consumer </br>
 ```
+Consumer:
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute:  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic topic1 --from-beginning
 ```
 ###### CASE#4: 
-Producer
+
 ```
+Producer:
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/kafka-console-producer.sh --broker-list localhost:8082 --topic topic3
 ```
-Consumer
 ```
+Consumer:
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute:  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic topic1 --from-beginning
 ```
