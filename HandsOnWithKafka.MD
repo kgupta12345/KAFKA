@@ -28,7 +28,7 @@
     mv kafka_2.12-2.3.0 /usr/local/kafka   
     
 ```
-##### STEP#2: Start Zookeeper:
+#### STEP#2: Start Zookeeper:
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/zookeeper-server-start.sh config/zookeeper.properties 
@@ -38,7 +38,7 @@
 ![image](https://user-images.githubusercontent.com/45539698/66250650-2892d200-e763-11e9-9a29-2255515a6c16.png)
 
 
-##### STEP#3: Create & Start Multiple Brokers:
+#### STEP#3: Create & Start Multiple Brokers:
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0/config
 [2] Now, create multiple Brokers:
@@ -88,7 +88,7 @@
 ![image](https://user-images.githubusercontent.com/45539698/66250957-62fe6e00-e767-11e9-928d-19b88e9070aa.png)
 
 
-##### STEP#4: Create Topic:
+#### STEP#4: Create Topic:
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/kafka-topics.sh --zookeeper localhost:2181 --create --topic topic1 --replication-factor 4 --partitions 3 
@@ -106,17 +106,17 @@
 ![image](https://user-images.githubusercontent.com/45539698/66333403-86d2d700-e954-11e9-8931-5118aa958cf6.png)
 
 
-##### STEP#5: Create Producer:
+#### STEP#5: Create Producer:
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/kafka-console-producer.sh --broker-list localhost:9092 --topic topic1
 ```
-##### STEP#6: Create Consumer
+#### STEP#6: Create Consumer
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute:  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic topic1 --from-beginning
 ```
-##### STEP#7: Now send something from Producer and observe Consumer Terminal:
+#### STEP#7: Now send something from Producer and observe Consumer Terminal:
 
 ![image](https://user-images.githubusercontent.com/45539698/66251066-52e78e00-e769-11e9-8e6e-2fb3728638f8.png)
 
@@ -135,7 +135,7 @@
 *The Partition which lands on the Broker (first) becomes the **Leader**, its replicas on other Brokers are **Followers***
 ![image](https://user-images.githubusercontent.com/45539698/66251920-52ec8b80-e773-11e9-8f60-876385469d94.png)
 
-##### STEP#8: Testing with KAFKA-CONNECT:
+#### STEP#8: Testing with KAFKA-CONNECT:
 ```
 [1] Create a source file [Any location | With Permissions | With some data].
 [2] Create a blank file [Any location | With Permissions]
