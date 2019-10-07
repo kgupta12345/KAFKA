@@ -111,21 +111,27 @@
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/kafka-console-producer.sh --broker-list localhost:2181 --topic topic1
 ```
+
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/kafka-console-producer.sh --broker-list localhost:2181 --topic topic4
 ```
+###### RESULTS: Topic Not Available:
+![image](https://user-images.githubusercontent.com/45539698/66336290-6dcd2480-e95a-11e9-987e-c8a4ceae9be3.png)
 
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/kafka-console-producer.sh --broker-list localhost:8082 --topic topic2
 ```
-###### RESULTS: Waiting for another Input.
+###### RESULTS: Waiting for another Input......
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/kafka-console-producer.sh --broker-list localhost:8082 --topic topic3
 ```
-###### RESULTS: Topic Not Available.
+###### RESULTS: Topic Not Available:
+![image](https://user-images.githubusercontent.com/45539698/66336139-2777c580-e95a-11e9-9a88-94c71cbf9ca3.png)
+
+
 
 
 
