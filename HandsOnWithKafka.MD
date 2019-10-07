@@ -1,6 +1,6 @@
 ## Practical with Kafka
 
-##### STEP#0: Get Java8:
+#### STEP#0: Get Java8:
 
 ```
 [1] Download jdk-8u221-linux-x64.tar.gz from the Official Website.
@@ -19,7 +19,7 @@
 [8] Check the Java Version: 
     java -version
 ```
-##### STEP#1: Download & Install kafka:
+#### STEP#1: Download & Install kafka:
 ```
 [1] Download: kafka_2.12-2.3.0.tgz
 [2] Extract: kafka_2.12-2.3.0.tgz:
