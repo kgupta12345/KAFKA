@@ -28,7 +28,7 @@
     mv kafka_2.12-2.3.0 /usr/local/kafka   
     
 ```
-##### STEP#2: Start Zookeeper
+##### STEP#2: Start Zookeeper:
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/zookeeper-server-start.sh config/zookeeper.properties 
@@ -88,12 +88,12 @@
 ![image](https://user-images.githubusercontent.com/45539698/66250957-62fe6e00-e767-11e9-928d-19b88e9070aa.png)
 
 
-##### STEP#4: Create Topic
+##### STEP#4: Create Topic:
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/kafka-topics.sh --zookeeper localhost:2181 --create --topic topic1 --replication-factor 4 --partitions 3 
 ```
-[OR]
+[OR] - Use any Broker/Server | Example: server-2 running on 8082
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:8082 --replication-factor 3 --partitions 3 --topic topic2
@@ -103,11 +103,10 @@
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0 
 [2] Execute: bin/kafka-topics.sh --list --zookeeper localhost:2181 
 ```
+![image](https://user-images.githubusercontent.com/45539698/66333403-86d2d700-e954-11e9-8931-5118aa958cf6.png)
 
 
-
-
-##### STEP#5: Create Producer
+##### STEP#5: Create Producer:
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/kafka-console-producer.sh --broker-list localhost:9092 --topic topic1
