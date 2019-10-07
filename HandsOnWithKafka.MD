@@ -125,7 +125,8 @@
 [2] Execute: ./kafka-topics.sh --describe --zookeeper localhost:2181 --topic topic1
 ```
 ![image](https://user-images.githubusercontent.com/45539698/66251615-bb396e00-e76f-11e9-9285-3a9b240cf51d.png)
-*(SIMILAR) PICTORIAL REPRESENTATION*
+*(SIMILAR) PICTORIAL REPRESENTATION - WITH BROKERS=3 | PARTITIONS=2 | RF=2* </br>
+*The Partition which lands on the Broker (first) becomes the Leader, its replicas on other Brokers are Followers*
 ![image](https://user-images.githubusercontent.com/45539698/66251920-52ec8b80-e773-11e9-8f60-876385469d94.png)
 
 ##### STEP#8: Testing with KAFKA-CONNECT:
