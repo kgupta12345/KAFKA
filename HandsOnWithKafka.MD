@@ -121,6 +121,8 @@ Consumer :
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute:  bin/kafka-console-consumer.sh --bootstrap-server localhost:2181 --topic topic1 --from-beginning
 ```
+![image](https://user-images.githubusercontent.com/45539698/66338412-ae2ea180-e95e-11e9-8de2-39f9f9d0a4b3.png)
+
 ###### CASE#2: 
 
 ```
@@ -133,6 +135,7 @@ Consumer:
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute:  bin/kafka-console-consumer.sh --bootstrap-server localhost:2181 --topic topic4 --from-beginning
 ```
+![image](https://user-images.githubusercontent.com/45539698/66338627-24330880-e95f-11e9-9778-6f208126aa91.png)
 
 ###### CASE#3: 
  
@@ -144,7 +147,7 @@ Producer:
 ```
 Consumer:
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
-[2] Execute:  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic topic1 --from-beginning
+[2] Execute:  bin/kafka-console-consumer.sh --bootstrap-server localhost:8082 --topic topic1 --from-beginning
 ```
 ###### CASE#4: 
 
@@ -156,7 +159,7 @@ Producer:
 ```
 Consumer:
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
-[2] Execute:  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic topic1 --from-beginning
+[2] Execute:  bin/kafka-console-consumer.sh --bootstrap-server localhost:8082 --topic topic1 --from-beginning
 ```
 
 
