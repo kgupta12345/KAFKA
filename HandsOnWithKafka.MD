@@ -109,8 +109,36 @@
 #### STEP#5: Create Producer:
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
-[2] Execute: bin/kafka-console-producer.sh --broker-list localhost:9092 --topic topic1
+[2] Execute: bin/kafka-console-producer.sh --broker-list localhost:2181 --topic topic1
 ```
+```
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
+[2] Execute: bin/kafka-console-producer.sh --broker-list localhost:2181 --topic topic4
+```
+
+```
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
+[2] Execute: bin/kafka-console-producer.sh --broker-list localhost:8082 --topic topic2
+```
+###### RESULTS: Waiting for another Input.
+```
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
+[2] Execute: bin/kafka-console-producer.sh --broker-list localhost:8082 --topic topic3
+```
+###### RESULTS: Topic Not Available.
+
+
+
+
+###### Or use Zookeeper | Example: server-2 running on 8082
+###### Or use any Broker/Server | Example: server-2 running on 8082
+###### Or use any Broker/Server | Example: server-2 running on 8082
+###### Or use any Broker/Server | Example: server-2 running on 8082
+###### Or use any Broker/Server | Example: server-2 running on 8082
+
+
+
+
 #### STEP#6: Create Consumer
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
