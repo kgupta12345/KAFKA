@@ -93,13 +93,16 @@
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/kafka-topics.sh --zookeeper localhost:2181 --create --topic topic1 --replication-factor 4 --partitions 3 
 ```
-
+[OR]
+```
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
+[2] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:8082 --replication-factor 3 --partitions 3 --topic topic2
+```
 ###### List of all Topics: </br>
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0 
 [2] Execute: bin/kafka-topics.sh --list --zookeeper localhost:2181 
 ```
-![image](https://user-images.githubusercontent.com/45539698/66253375-e9757880-e784-11e9-9db5-25b55e471971.png)
 
 
 
