@@ -92,7 +92,7 @@
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:8082 --replication-factor 4 --partitions 4 --topic topic82
 ```
-###### Example2: Let us create 3 topics (topic83-1, topic83-2, topic83-3) with 4 partitions and 4 replicas `each` on fourth broker (Broker#83 | Running on 8083)
+###### Example2: Let us create 3 topics (topic83-1, topic83-2, topic83-3) with 4 partitions and 4 replicas each on fourth broker (Broker#83 | Running on 8083)
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:8083 --replication-factor 4 --partitions 4 --topic topic83-1
