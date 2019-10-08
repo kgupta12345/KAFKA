@@ -86,13 +86,13 @@
 ![image](https://user-images.githubusercontent.com/45539698/66250957-62fe6e00-e767-11e9-928d-19b88e9070aa.png)
 
 
-##### STEP#4: Create Topic: Use any Broker/Server
-###### Example1: server-2 running on 8082
+##### STEP#4: Create Topic-Choose any Broker:
+###### Example1: We are creating 1 topic (topic82) with 4 partitions and 4 replicas on broker-2 (running on 8082)
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:8082 --replication-factor 4 --partitions 4 --topic topic82
 ```
-###### Example2: server-3 running on 8083
+###### Example2: We are creating 3 topics (topic83-1, topic83-2, topic83-3) with 4 partitions and 4 replicas each on broker-3 (running on 8083)
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:8083 --replication-factor 4 --partitions 4 --topic topic83-1
