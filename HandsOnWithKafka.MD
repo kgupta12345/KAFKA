@@ -91,7 +91,9 @@
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:8082 --replication-factor 4 --partitions 4 --topic topic82
-Summary:
+```
+###### Summary:
+```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0/bin
 [2] Execute: ./kafka-topics.sh --describe --zookeeper localhost:2181 --topic topic82
 ```
@@ -103,7 +105,9 @@ Summary:
 [2] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:8083 --replication-factor 4 --partitions 4 --topic topic83-1
 [3] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:8083 --replication-factor 4 --partitions 4 --topic topic83-2
 [4] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:8083 --replication-factor 4 --partitions 4 --topic topic83-3
-Summary:
+```
+###### Summary:
+```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0/bin
 [2] Execute: ./kafka-topics.sh --describe --zookeeper localhost:2181 --topic topic83-1
 [3] Execute: ./kafka-topics.sh --describe --zookeeper localhost:2181 --topic topic83-2
