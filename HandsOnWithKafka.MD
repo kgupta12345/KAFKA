@@ -91,6 +91,9 @@
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:8082 --replication-factor 4 --partitions 4 --topic topic82
+Summary:
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0/bin
+[2] Execute: ./kafka-topics.sh --describe --zookeeper localhost:2181 --topic topic82
 ```
 ![image](https://user-images.githubusercontent.com/45539698/66378693-a52ae800-e9d1-11e9-9fa6-0a2922e131f5.png)
 
@@ -100,6 +103,11 @@
 [2] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:8083 --replication-factor 4 --partitions 4 --topic topic83-1
 [3] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:8083 --replication-factor 4 --partitions 4 --topic topic83-2
 [4] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:8083 --replication-factor 4 --partitions 4 --topic topic83-3
+Summary:
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0/bin
+[2] Execute: ./kafka-topics.sh --describe --zookeeper localhost:2181 --topic topic83-1
+[3] Execute: ./kafka-topics.sh --describe --zookeeper localhost:2181 --topic topic83-2
+[4] Execute: ./kafka-topics.sh --describe --zookeeper localhost:2181 --topic topic83-3
 ```
 ![image](https://user-images.githubusercontent.com/45539698/66378818-ef13ce00-e9d1-11e9-8263-83304b842c08.png)
 
