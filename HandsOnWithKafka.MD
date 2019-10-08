@@ -78,12 +78,11 @@
     - Execute: bin/kafka-server-start.sh config/server-3.properties 
 
 ```
-###### List/Check of all Brokers: </br>
+###### List/Check all Brokers: </br>
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0 
 [2] Execute: ./bin/zookeeper-shell.sh localhost:2181 ls /brokers/ids
 ```
-*All Brokers are Running* </br>
 ![image](https://user-images.githubusercontent.com/45539698/66250957-62fe6e00-e767-11e9-928d-19b88e9070aa.png)
 
 
@@ -134,7 +133,7 @@ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic someothe
 
 <hr>
 
-*TO VIEW SUMMARY:* </br>
+###### To view Summary: </br>
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0/bin
 [2] Execute: ./kafka-topics.sh --describe --zookeeper localhost:2181 --topic topic1
@@ -157,7 +156,7 @@ OBSERVATION: The data in souce.txt has been moved into destination.txt.
 NOTE: If you keep adding stuff in source.txt, the changes won't reflect in real time on destination.txt.Kafka Connect hold Batch Properties.
     
 ```  
-*TO VIEW THE DATA ON ANY TOPIC:* </br>
+###### To view Data on any Topic: </br>
 ```
 bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic <TOPIC-NAME> --from-beginning
 ```
