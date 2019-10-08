@@ -117,7 +117,8 @@ Consumer:
 ![image](https://user-images.githubusercontent.com/45539698/66251066-52e78e00-e769-11e9-8e6e-2fb3728638f8.png)
 
 <hr>
-*WHAT IF - PRODUCER SENDS ON RANDOM TOPIC:*  </br>
+*WHAT IF - PRODUCER SENDS ON RANDOM TOPIC:* </br>
+
 ```
 bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic someothertopic --from-beginning
 ```
