@@ -117,9 +117,15 @@ Consumer:
 ![image](https://user-images.githubusercontent.com/45539698/66251066-52e78e00-e769-11e9-8e6e-2fb3728638f8.png)
 
 <hr>
-*WHAT IF*  </br>
- bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic someothertopic --from-beginning
+*WHAT IF - PRODUCER SENDS ON RANDOM TOPIC:*  </br>
+```
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic someothertopic --from-beginning
+```
 ![image](https://user-images.githubusercontent.com/45539698/65813241-363ed980-e1f0-11e9-8806-a4fd584ab632.png)
+*WHAT IF - CONSUMER LISTENING ON RANDOM TOPIC:* </br>  
+```
+```
+
 <hr>
 
 *TO VIEW SUMMARY:* </br>
