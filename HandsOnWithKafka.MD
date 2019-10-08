@@ -84,16 +84,15 @@
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0 
 [2] Execute: ./bin/zookeeper-shell.sh localhost:2181 ls /brokers/ids
 ```
-![image](https://user-images.githubusercontent.com/45539698/66250957-62fe6e00-e767-11e9-928d-19b88e9070aa.png)
-
+![image](https://user-images.githubusercontent.com/45539698/66376861-21bbc780-e9ce-11e9-9b9f-9fb26b299e35.png)
 
 ##### STEP#4: Create Topic-Choose any Broker:
-###### Example1: We are creating 1 topic (topic82) with 4 partitions and 4 replicas on broker-2 (running on 8082)
+###### Example1: Let us create 1 topic (topic82) with 4 partitions and 4 replicas on third broker (Broker#2 | Running on 8082)
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:8082 --replication-factor 4 --partitions 4 --topic topic82
 ```
-###### Example2: We are creating 3 topics (topic83-1, topic83-2, topic83-3) with 4 partitions and 4 replicas each on broker-3 (running on 8083)
+###### Example2: Let us create 3 topics (topic83-1, topic83-2, topic83-3) with 4 partitions and 4 replicas each on fourth broker (Broker#3 | Running on 8083)
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:8083 --replication-factor 4 --partitions 4 --topic topic83-1
