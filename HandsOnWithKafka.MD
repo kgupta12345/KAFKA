@@ -86,7 +86,7 @@
 ```
 ![image](https://user-images.githubusercontent.com/45539698/66376861-21bbc780-e9ce-11e9-9b9f-9fb26b299e35.png)
 
-##### STEP#4: Create Topic-Choose any Broker from [80, 81, 82, 83]:
+##### STEP#4: Create Topic-Choose any Broker from [`80`, `81`, `82`, `83`]:
 ###### Example1: Let us create 1 topic (topic82) with 4 partitions and 4 replicas on third broker (Broker#82 | Running on 8082)
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
