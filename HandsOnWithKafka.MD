@@ -80,7 +80,7 @@
 ```
 ###### List/Check of all Brokers: </br>
 ```
-[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0 </br>
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0 
 [2] Execute: ./bin/zookeeper-shell.sh localhost:2181 ls /brokers/ids
 ```
 *All Brokers are Running* </br>
