@@ -86,8 +86,7 @@
 ![image](https://user-images.githubusercontent.com/45539698/66250957-62fe6e00-e767-11e9-928d-19b88e9070aa.png)
 
 
-##### STEP#4: Create Topic:
-*Using any Broker/Server | Example: server-2 running on 9092*
+##### STEP#4: Create Topic: Use any Broker/Server | Example: server-2 running on 9092
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 3 --partitions 3 --topic topic1
