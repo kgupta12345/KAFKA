@@ -46,22 +46,22 @@
 [3] Now edit the below properties in the above broker files:
     - sudo gedit server.properties
     - broker.id=0
-    - listeners=PLAINTEXT://:8080
+    - listeners=PLAINTEXT://:9090
     - log.dirs=/tmp/kafka-logs-0
     --------------------------------
     - sudo gedit server-1.properties
     - broker.id=1
-    - listeners=PLAINTEXT://:8081
+    - listeners=PLAINTEXT://:9091
     - log.dirs=/tmp/kafka-logs-1
     --------------------------------
     - sudo gedit server-2.properties
     - broker.id=2
-    - listeners=PLAINTEXT://:8082
+    - listeners=PLAINTEXT://:9092
     - log.dirs=/tmp/kafka-logs-2
     --------------------------------
     - sudo gedit server-3.properties
     - broker.id=3
-    - listeners=PLAINTEXT://:8083
+    - listeners=PLAINTEXT://:9093
     - log.dirs=/tmp/kafka-logs-3
     --------------------------------
 [4] Start all four Brokers.
@@ -88,10 +88,10 @@
 
 
 ##### STEP#4: Create Topic:
-*Using any Broker/Server | Example: server-2 running on 8082*
+*Using any Broker/Server | Example: server-2 running on 9092*
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
-[2] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:8082 --replication-factor 3 --partitions 3 --topic topic1
+[2] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 3 --partitions 3 --topic topic1
 ```
 ###### List of all Topics: </br>
 ```
@@ -102,14 +102,14 @@
 ```
 Producer:
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
-[2] Execute: bin/kafka-console-producer.sh --broker-list localhost:8082 --topic topic1
+[2] Execute: bin/kafka-console-producer.sh --broker-list localhost:9092 --topic topic1
 ```
 
 ##### STEP#6: Create Consumer:
 ```
 Consumer:
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
-[2] Execute:  bin/kafka-console-consumer.sh --bootstrap-server localhost:8082 --topic topic1 --from-beginning
+[2] Execute:  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic topic1 --from-beginning
 ```
 
 #### STEP#7: Now send something from Producer and observe Consumer Terminal:
