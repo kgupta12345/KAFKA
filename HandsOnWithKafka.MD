@@ -125,6 +125,7 @@ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic someothe
 *WHAT IF - CONSUMER LISTENING ON RANDOM TOPIC:* </br>  
 ```
 ```
+![image](https://user-images.githubusercontent.com/45539698/66363193-06879280-e9a3-11e9-9787-4f769c9d9199.png)
 
 <hr>
 
