@@ -134,27 +134,28 @@
 
 ##### STEP#7: Now send something from Producer and observe Consumer Terminal:
 
-
-
-
-
+![image](https://user-images.githubusercontent.com/45539698/66397406-64df6000-e9f9-11e9-960b-11ff072ecc82.png)
 
 
 <hr>
 
+*TO NOTE:*
+
+![image](https://user-images.githubusercontent.com/45539698/66397055-a9b6c700-e9f8-11e9-8a56-67df260572e4.png)
+
+
 *WHAT IF - PRODUCER HOSTING ON RANDOM TOPIC:* </br>
 
 ```
-bin/kafka-console-consumer.sh --bootstrap-server localhost:8082 tpic someothertopic --from-beginning
+bin/kafka-console-producer.sh --broker-list localhost:8082 --topic randomtopic
 ```
 
-![image](https://user-images.githubusercontent.com/45539698/65813241-363ed980-e1f0-11e9-8806-a4fd584ab632.png)
+
 
 *WHAT IF - CONSUMER LISTENING ON RANDOM TOPIC:* </br>
 ```
- bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic topic6 --from-beginning
+ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic randomtopic --from-beginning
 ```
-![image](https://user-images.githubusercontent.com/45539698/66363193-06879280-e9a3-11e9-9787-4f769c9d9199.png)
 
 <hr>
 
