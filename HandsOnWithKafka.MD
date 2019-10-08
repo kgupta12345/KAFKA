@@ -122,28 +122,30 @@
 ```
 ##### STEP#5: Create Producer:
 ```
-Producer:
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
-[2] Execute: bin/kafka-console-producer.sh --broker-list localhost:9092 --topic topic1
+[2] Execute: bin/kafka-console-producer.sh --broker-list localhost:8082 --topic topic82
 ```
 
 ##### STEP#6: Create Consumer:
 ```
-Consumer:
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
-[2] Execute:  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic topic1 --from-beginning
+[2] Execute:  bin/kafka-console-consumer.sh --bootstrap-server localhost:8082 --topic topic82 --from-beginning
 ```
 
 ##### STEP#7: Now send something from Producer and observe Consumer Terminal:
 
-![image](https://user-images.githubusercontent.com/45539698/66251066-52e78e00-e769-11e9-8e6e-2fb3728638f8.png)
+
+
+
+
+
 
 <hr>
 
 *WHAT IF - PRODUCER HOSTING ON RANDOM TOPIC:* </br>
 
 ```
-bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic someothertopic --from-beginning
+bin/kafka-console-consumer.sh --bootstrap-server localhost:8082 tpic someothertopic --from-beginning
 ```
 
 ![image](https://user-images.githubusercontent.com/45539698/65813241-363ed980-e1f0-11e9-8806-a4fd584ab632.png)
