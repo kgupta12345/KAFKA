@@ -40,9 +40,10 @@
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0/config
 [2] Now, create multiple Brokers:
-    cp server.propertiess server-1.properties
-    cp server.propertiess server-2.properties
-    cp server.propertiess server-3.properties
+    mv server.properties server-0.properties
+    cp server-0.propertiess server-1.properties
+    cp server-0.propertiess server-2.properties
+    cp server-0.propertiess server-3.properties
 [3] Now edit the below properties in the above broker files:
     - sudo gedit server-0.properties
     - broker.id=80
