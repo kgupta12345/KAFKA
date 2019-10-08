@@ -1,6 +1,6 @@
 ## Practical with Kafka
 
-#### STEP#0: Get Java8:
+##### STEP#0: Get Java8:
 
 ```
 [1] Download jdk-8u221-linux-x64.tar.gz from the Official Website.
@@ -19,7 +19,7 @@
 [8] Check the Java Version: 
     java -version
 ```
-#### STEP#1: Download & Install kafka:
+##### STEP#1: Download & Install kafka:
 ```
 [1] Download: kafka_2.12-2.3.0.tgz
 [2] Extract: kafka_2.12-2.3.0.tgz:
@@ -28,7 +28,7 @@
     mv kafka_2.12-2.3.0 /usr/local/kafka   
     
 ```
-#### STEP#2: Start Zookeeper:
+##### STEP#2: Start Zookeeper:
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/zookeeper-server-start.sh config/zookeeper.properties 
@@ -38,7 +38,7 @@
 ![image](https://user-images.githubusercontent.com/45539698/66250650-2892d200-e763-11e9-9a29-2255515a6c16.png)
 
 
-#### STEP#3: Create & Start Multiple Brokers:
+##### STEP#3: Create & Start Multiple Brokers:
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0/config
 [2] Now, create multiple Brokers:
@@ -88,12 +88,8 @@
 ![image](https://user-images.githubusercontent.com/45539698/66250957-62fe6e00-e767-11e9-928d-19b88e9070aa.png)
 
 
-#### STEP#4: Create Topic:
-```
-[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
-[2] Execute: bin/kafka-topics.sh --zookeeper localhost:2181 --create --topic topic1 --replication-factor 4 --partitions 3 
-```
-###### Or use any Broker/Server | Example: server-2 running on 8082
+##### STEP#4: Create Topic:
+*Using any Broker/Server | Example: server-2 running on 8082*
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:8082 --replication-factor 3 --partitions 3 --topic topic2
@@ -103,10 +99,9 @@
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0 
 [2] Execute: bin/kafka-topics.sh --list --zookeeper localhost:2181 
 ```
-![image](https://user-images.githubusercontent.com/45539698/66333403-86d2d700-e954-11e9-8931-5118aa958cf6.png)
 
 
-#### STEP#5: Create Producer & Consumer:
+##### STEP#5: Create Producer & Consumer:
 
 ###### CASE#1: 
 
