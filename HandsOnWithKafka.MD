@@ -116,10 +116,11 @@ Consumer:
 
 ![image](https://user-images.githubusercontent.com/45539698/66251066-52e78e00-e769-11e9-8e6e-2fb3728638f8.png)
 
+<hr>
 *WHAT IF*  </br>
  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic someothertopic --from-beginning
 ![image](https://user-images.githubusercontent.com/45539698/65813241-363ed980-e1f0-11e9-8806-a4fd584ab632.png)
-
+<hr>
 
 *TO VIEW SUMMARY:* </br>
 ```
@@ -141,11 +142,11 @@ Consumer:
 [6] Execute: bin/connect-standalone.sh config/connect-standalone.properties config/connect-file-source.properties config/connect-file-sink.properties
 
 OBSERVATION: The data in souce.txt has been moved into destination.txt.
-NOTE: If you keep adding stuff in source.txt, the changes wont reflect in real time on destination.txt.
+NOTE: If you keep adding stuff in source.txt, the changes won't reflect in real time on destination.txt.Kafka Connect hold Batch Properties.
     
-  ```  
-  *TO VIEW THE DATA ON TOPIC:* </br>
-  ```
-  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic <TOPIC-NAME> --from-beginning
-  ```
-  ![image](https://user-images.githubusercontent.com/45539698/66253162-67378500-e781-11e9-8acf-10203f937f01.png)
+```  
+*TO VIEW THE DATA ON ANY TOPIC:* </br>
+```
+bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic <TOPIC-NAME> --from-beginning
+```
+![image](https://user-images.githubusercontent.com/45539698/66253162-67378500-e781-11e9-8acf-10203f937f01.png)
