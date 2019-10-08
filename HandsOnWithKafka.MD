@@ -112,7 +112,7 @@ Consumer:
 [2] Execute:  bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic topic1 --from-beginning
 ```
 
-#### STEP#7: Now send something from Producer and observe Consumer Terminal:
+##### STEP#7: Now send something from Producer and observe Consumer Terminal:
 
 ![image](https://user-images.githubusercontent.com/45539698/66251066-52e78e00-e769-11e9-8e6e-2fb3728638f8.png)
 
@@ -131,7 +131,7 @@ Consumer:
 *The Partition which lands on the Broker (first) becomes the **Leader**, its replicas on other Brokers are **Followers***
 ![image](https://user-images.githubusercontent.com/45539698/66251920-52ec8b80-e773-11e9-8f60-876385469d94.png)
 
-#### STEP#8: Testing with KAFKA-CONNECT:
+##### STEP#8: Testing with KAFKA-CONNECT:
 ```
 [1] Create a source file [Any location | With Permissions | With some data].
 [2] Create a blank file [Any location | With Permissions]
