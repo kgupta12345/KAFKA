@@ -25,14 +25,12 @@
 [2] Extract: kafka_2.12-2.3.0.tgz:
     kafka_2.12-2.3.0
 [3] Move Extracted folder (kafka_2.12-2.3.0) to a desired location. In my case I created /usr/local/kafka [with permissions]:
-    mv kafka_2.12-2.3.0 /usr/local/kafka   
-    
+    mv kafka_2.12-2.3.0 /usr/local/kafka       
 ```
 ##### STEP#2: Start Zookeeper:
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/zookeeper-server-start.sh config/zookeeper.properties 
-[3] Zookeeper started on port 2181   
 ```
 *Zookeeper started on port 2181*
 ![image](https://user-images.githubusercontent.com/45539698/66250650-2892d200-e763-11e9-9a29-2255515a6c16.png)
@@ -85,6 +83,7 @@
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0 </br>
 [2] Execute: ./bin/zookeeper-shell.sh localhost:2181 ls /brokers/ids
 ```
+*All Brokers are Running* </br>
 ![image](https://user-images.githubusercontent.com/45539698/66250957-62fe6e00-e767-11e9-928d-19b88e9070aa.png)
 
 
@@ -92,72 +91,26 @@
 *Using any Broker/Server | Example: server-2 running on 8082*
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
-[2] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:8082 --replication-factor 3 --partitions 3 --topic topic2
+[2] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:8082 --replication-factor 3 --partitions 3 --topic topic1
 ```
 ###### List of all Topics: </br>
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0 
 [2] Execute: bin/kafka-topics.sh --list --zookeeper localhost:2181 
 ```
-
-
-##### STEP#5: Create Producer & Consumer:
-
-###### CASE#1: 
-
+##### STEP#5: Create Producer:
 ```
 Producer:
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
-[2] Execute: bin/kafka-console-producer.sh --broker-list localhost:2181 --topic topic1
+[2] Execute: bin/kafka-console-producer.sh --broker-list localhost:8082 --topic topic1
 ```
 
-```
-Consumer :
-[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
-[2] Execute:  bin/kafka-console-consumer.sh --bootstrap-server localhost:2181 --topic topic1 --from-beginning
-```
-![image](https://user-images.githubusercontent.com/45539698/66338412-ae2ea180-e95e-11e9-8de2-39f9f9d0a4b3.png)
-
-###### CASE#2: 
-
-```
-Producer:
-[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
-[2] Execute: bin/kafka-console-producer.sh --broker-list localhost:2181 --topic topic4
-```
-```
-Consumer:
-[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
-[2] Execute:  bin/kafka-console-consumer.sh --bootstrap-server localhost:2181 --topic topic4 --from-beginning
-```
-![image](https://user-images.githubusercontent.com/45539698/66338627-24330880-e95f-11e9-9778-6f208126aa91.png)
-
-###### CASE#3: 
- 
-```
-Producer:
-[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
-[2] Execute: bin/kafka-console-producer.sh --broker-list localhost:8082 --topic topic2
-```
+##### STEP#6: Create Consumer:
 ```
 Consumer:
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute:  bin/kafka-console-consumer.sh --bootstrap-server localhost:8082 --topic topic1 --from-beginning
 ```
-###### CASE#4: 
-
-```
-Producer:
-[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
-[2] Execute: bin/kafka-console-producer.sh --broker-list localhost:8082 --topic topic3
-```
-```
-Consumer:
-[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
-[2] Execute:  bin/kafka-console-consumer.sh --bootstrap-server localhost:8082 --topic topic1 --from-beginning
-```
-
-
 
 #### STEP#7: Now send something from Producer and observe Consumer Terminal:
 
