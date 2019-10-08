@@ -44,29 +44,29 @@
     cp server.propertiess server-2.properties
     cp server.propertiess server-3.properties
 [3] Now edit the below properties in the above broker files:
-    - sudo gedit server.properties
-    - broker.id=0
-    - listeners=PLAINTEXT://:9090
-    - log.dirs=/tmp/kafka-logs-0
+    - sudo gedit server-0.properties
+    - broker.id=80
+    - listeners=PLAINTEXT://:8080
+    - log.dirs=/tmp/kafka-logs-80
     --------------------------------
     - sudo gedit server-1.properties
-    - broker.id=1
-    - listeners=PLAINTEXT://:9091
-    - log.dirs=/tmp/kafka-logs-1
+    - broker.id=81
+    - listeners=PLAINTEXT://:8081
+    - log.dirs=/tmp/kafka-logs-81
     --------------------------------
     - sudo gedit server-2.properties
-    - broker.id=2
-    - listeners=PLAINTEXT://:9092
-    - log.dirs=/tmp/kafka-logs-2
+    - broker.id=82
+    - listeners=PLAINTEXT://:8082
+    - log.dirs=/tmp/kafka-logs-82
     --------------------------------
     - sudo gedit server-3.properties
-    - broker.id=3
-    - listeners=PLAINTEXT://:9093
-    - log.dirs=/tmp/kafka-logs-3
+    - broker.id=83
+    - listeners=PLAINTEXT://:8083
+    - log.dirs=/tmp/kafka-logs-83
     --------------------------------
 [4] Start all four Brokers.
     - Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0/
-    - Execute: bin/kafka-server-start.sh config/server.properties 
+    - Execute: bin/kafka-server-start.sh config/server-0.properties 
     
     - Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0/
     - Execute: bin/kafka-server-start.sh config/server-1.properties 
@@ -86,11 +86,20 @@
 ![image](https://user-images.githubusercontent.com/45539698/66250957-62fe6e00-e767-11e9-928d-19b88e9070aa.png)
 
 
-##### STEP#4: Create Topic: Use any Broker/Server | Example: server-2 running on 9092
+##### STEP#4: Create Topic: Use any Broker/Server
+###### Example1: server-2 running on 8082
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
-[2] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 3 --partitions 3 --topic topic1
+[2] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:8082 --replication-factor 4 --partitions 4 --topic topic82
 ```
+###### Example2: server-3 running on 8083
+```
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
+[2] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:8083 --replication-factor 4 --partitions 4 --topic topic83-1
+[3] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:8083 --replication-factor 4 --partitions 4 --topic topic83-2
+[4] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:8083 --replication-factor 4 --partitions 4 --topic topic83-3
+```
+
 ###### List of all Topics: </br>
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0 
