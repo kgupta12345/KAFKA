@@ -151,7 +151,7 @@ ___________________
 bin/kafka-console-producer.sh --broker-list localhost:8080 --topic topicfrommoon
 ```
 ![image](https://user-images.githubusercontent.com/45539698/66460800-49c22e00-ea95-11e9-8876-0820bd5f5808.png)
-*OBSERVATION: The Topic (**topicfrommoon***) gets prepard on run-time, which can be listed using: **bin/kafka-topics.sh --list --zookeeper localhost:2181*** 
+*OBSERVATION: The Topic (**topicfrommoon**) gets prepard on run-time, which can be listed using: **bin/kafka-topics.sh --list --zookeeper localhost:2181*** 
 
 
 *WHAT IF - CONSUMER LISTENING ON RANDOM TOPIC:* </br>
@@ -159,7 +159,7 @@ bin/kafka-console-producer.sh --broker-list localhost:8080 --topic topicfrommoon
  bin/kafka-console-consumer.sh --bootstrap-server localhost:8080 --topic topicfromvenus --from-beginning
 ```
 ![image](https://user-images.githubusercontent.com/45539698/66461729-4c258780-ea97-11e9-9394-6ed432b73d48.png)
-*OBSERVATION1: The Topic (**topicfromvenus***) gets prepard on run-time, which can be listed using: **bin/kafka-topics.sh --list --zookeeper localhost:2181*** </br>
+*OBSERVATION1: The Topic (**topicfromvenus**) gets prepard on run-time, which can be listed using: **bin/kafka-topics.sh --list --zookeeper localhost:2181** * </br>
 *OBSERVATION2: Consumer keeps waiting on topicfromvenus, till it receives any data *
 <hr>
 
