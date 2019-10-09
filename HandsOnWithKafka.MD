@@ -145,6 +145,9 @@ ___________________
 *WHAT IF - PRODUCER HOSTING ON A REPLICA | CONSUMER LISTENING FROM REPLICA* </br>
 ![image](https://user-images.githubusercontent.com/45539698/66397055-a9b6c700-e9f8-11e9-8a56-67df260572e4.png)
 
+*WHAT IF - ONLY 1 REPLICA * </br>
+![image](https://user-images.githubusercontent.com/45539698/66483187-38434b00-eac2-11e9-8cbc-bc7d80fd7633.png)
+
 
 *WHAT IF - PRODUCER HOSTING ON RANDOM TOPIC:* </br>
 ```
