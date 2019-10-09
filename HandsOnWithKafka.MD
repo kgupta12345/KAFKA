@@ -151,7 +151,14 @@ ___________________
 bin/kafka-console-producer.sh --broker-list localhost:8080 --topic topicfrommoon
 ```
 ![image](https://user-images.githubusercontent.com/45539698/66460800-49c22e00-ea95-11e9-8876-0820bd5f5808.png)
-*OBSERVATION: The Topic (**topicfrommoon**) gets prepard on run-time, which can be listed using: **bin/kafka-topics.sh --list --zookeeper localhost:2181*** 
+*OBSERVATION: The Topic (**topicfrommoon**) gets prepard on run-time, with one partition. This can be verified by:*
+```
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
+[2] Execute: bin/kafka-topics.sh --list --zookeeper localhost:2181
+[3] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0/bin
+[4] ./kafka-topics.sh --describe --zookeeper localhost:2181 --topic topicfrommoon
+```
+![image](https://user-images.githubusercontent.com/45539698/66472418-d5928500-eaaa-11e9-82e8-c80f2a56d78c.png)
 
 
 *WHAT IF - CONSUMER LISTENING ON RANDOM TOPIC:* </br>
@@ -180,6 +187,4 @@ NOTE: If you keep adding stuff in source.txt, the changes won't reflect in real 
 bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic <TOPIC-NAME> --from-beginning
 ```
 ![image](https://user-images.githubusercontent.com/45539698/66253162-67378500-e781-11e9-8acf-10203f937f01.png)
-
-###### To Delete any Topic: </br>
 
