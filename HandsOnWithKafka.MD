@@ -146,22 +146,21 @@ ___________________
 ![image](https://user-images.githubusercontent.com/45539698/66397055-a9b6c700-e9f8-11e9-8a56-67df260572e4.png)
 
 
-
 *WHAT IF - PRODUCER HOSTING ON RANDOM TOPIC:* </br>
 ```
 bin/kafka-console-producer.sh --broker-list localhost:8080 --topic topicfrommoon
 ```
 ![image](https://user-images.githubusercontent.com/45539698/66460800-49c22e00-ea95-11e9-8876-0820bd5f5808.png)
-*OBSERVATION: The Topic gets prepard on run-time, also **bin/kafka-topics.sh --list --zookeeper localhost:2181** results the newly created topic- **topicfrommoon***
+*OBSERVATION: The Topic (**topicfrommoon***) gets prepard on run-time, which can be listed using: **bin/kafka-topics.sh --list --zookeeper localhost:2181*** 
 
 
 *WHAT IF - CONSUMER LISTENING ON RANDOM TOPIC:* </br>
 ```
- bin/kafka-console-consumer.sh --bootstrap-server localhost:8080 --topic fopicfromvenus --from-beginning
+ bin/kafka-console-consumer.sh --bootstrap-server localhost:8080 --topic topicfromvenus --from-beginning
 ```
 ![image](https://user-images.githubusercontent.com/45539698/66461729-4c258780-ea97-11e9-9394-6ed432b73d48.png)
-*OBSERVATION: As the topcic is not available in the list, Consumer starts waiting for a similar sounding topic. Now, if we create one, then, the connection is estd.*
-
+*OBSERVATION1: The Topic (**topicfromvenus***) gets prepard on run-time, which can be listed using: **bin/kafka-topics.sh --list --zookeeper localhost:2181*** </br>
+*OBSERVATION2: Consumer keeps waiting on topicfromvenus, till it receives any data *
 <hr>
 
 ###### To view Summary: </br>
