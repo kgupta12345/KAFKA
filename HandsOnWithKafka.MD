@@ -150,8 +150,7 @@
 bin/kafka-console-producer.sh --broker-list localhost:8080 --topic topicfrommoon
 ```
 ![image](https://user-images.githubusercontent.com/45539698/66460800-49c22e00-ea95-11e9-8876-0820bd5f5808.png)
-
-*ALSO: **bin/kafka-topics.sh --list --zookeeper localhost:2181** results **topicfrommoon***
+*OBSERVATION: The Topic gets prepard on run-time, also **bin/kafka-topics.sh --list --zookeeper localhost:2181** results the newly created topic- **topicfrommoon***
 
 
 
@@ -159,6 +158,8 @@ bin/kafka-console-producer.sh --broker-list localhost:8080 --topic topicfrommoon
 ```
  bin/kafka-console-consumer.sh --bootstrap-server localhost:8080 --topic fopicfromvenus --from-beginning
 ```
+![image](https://user-images.githubusercontent.com/45539698/66461729-4c258780-ea97-11e9-9394-6ed432b73d48.png)
+*OBSERVATION: As the topcic is not available in the list, Consumer starts waiting for a similar sounding topic. Now, if we create one, then, the connection is estd.*
 
 <hr>
 
