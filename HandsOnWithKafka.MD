@@ -147,14 +147,17 @@
 *WHAT IF - PRODUCER HOSTING ON RANDOM TOPIC:* </br>
 
 ```
-bin/kafka-console-producer.sh --broker-list localhost:8082 --topic randomtopic
+bin/kafka-console-producer.sh --broker-list localhost:8080 --topic topicfrommoon
 ```
+![image](https://user-images.githubusercontent.com/45539698/66460800-49c22e00-ea95-11e9-8876-0820bd5f5808.png)
+
+*ALSO: **bin/kafka-topics.sh --list --zookeeper localhost:2181** results **topicfrommoon***
 
 
 
 *WHAT IF - CONSUMER LISTENING ON RANDOM TOPIC:* </br>
 ```
- bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic randomtopic --from-beginning
+ bin/kafka-console-consumer.sh --bootstrap-server localhost:8080 --topic fopicfromvenus --from-beginning
 ```
 
 <hr>
