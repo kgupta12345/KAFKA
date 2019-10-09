@@ -139,19 +139,20 @@
 
 <hr>
 
-*TO NOTE:*
+***POINTS TO NOTE:***
+___________________
 
+*WHAT IF - PRODUCER HOSTING ON A REPLICA | CONSUMER LISTENING FROM REPLICA* </br>
 ![image](https://user-images.githubusercontent.com/45539698/66397055-a9b6c700-e9f8-11e9-8a56-67df260572e4.png)
 
 
-*WHAT IF - PRODUCER HOSTING ON RANDOM TOPIC:* </br>
 
+*WHAT IF - PRODUCER HOSTING ON RANDOM TOPIC:* </br>
 ```
 bin/kafka-console-producer.sh --broker-list localhost:8080 --topic topicfrommoon
 ```
 ![image](https://user-images.githubusercontent.com/45539698/66460800-49c22e00-ea95-11e9-8876-0820bd5f5808.png)
 *OBSERVATION: The Topic gets prepard on run-time, also **bin/kafka-topics.sh --list --zookeeper localhost:2181** results the newly created topic- **topicfrommoon***
-
 
 
 *WHAT IF - CONSUMER LISTENING ON RANDOM TOPIC:* </br>
