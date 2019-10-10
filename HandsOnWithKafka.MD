@@ -193,6 +193,6 @@ OBSERVATION:
  - The data has been moved via topic (connect-test) mentioned in [connect-file-source.properties] & [connect-file-sink.properties].
 ```  
 ![image](https://user-images.githubusercontent.com/45539698/66560083-46ea3a80-eb74-11e9-8949-ffe33004eba3.png)
-![image](https://user-images.githubusercontent.com/45539698/66560388-f0313080-eb74-11e9-98cb-fa9d1ce40b79.png)
+![image](https://user-images.githubusercontent.com/45539698/66560504-2a023700-eb75-11e9-979b-5e2312b86d4a.png)
 
 
