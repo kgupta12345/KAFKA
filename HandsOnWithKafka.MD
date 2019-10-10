@@ -151,9 +151,9 @@ ___________________
 ![image](https://user-images.githubusercontent.com/45539698/66483187-38434b00-eac2-11e9-8cbc-bc7d80fd7633.png)
 *So far, we created  topics, producers and consumers on same broker(port).The topic replicas floated around in the cluster. Now, let us consider a situation:*
  - *Create a topic with only 1 Replica and 1 Partition. The newly created topic will get created on any broker randomly (Here: 8082).* </b>
- - *Create a producer on 8080.* </b>
- - *Create a consumer on 8080. Then 8082.* </b>
-*OBSERVATION: Internally, all brokers are inter-communicating & inter-connected with Zookeeper & Kafka cluster.Therefore computing is abstracted. </b>
+ - *Create a producer on 8080.* </br>
+ - *Create a consumer on 8080. Then 8082.* </br>
+*OBSERVATION: Internally, all brokers are inter-communicating & inter-connected with Zookeeper & Kafka cluster.Therefore computing is abstracted.* </br>
 
 *[5] WHAT IF - PRODUCER HOSTING ON RANDOM TOPIC:* </br>
 ```
