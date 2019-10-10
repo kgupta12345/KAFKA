@@ -187,9 +187,13 @@ bin/kafka-console-producer.sh --broker-list localhost:8080 --topic topicfrommoon
 [5] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0/
 [6] Execute: bin/connect-standalone.sh config/connect-standalone.properties config/connect-file-source.properties config/connect-file-sink.properties
 
-OBSERVATION: The data in souce.txt has been moved into destination.txt.
-NOTE: If you keep adding stuff in source.txt, the changes won't reflect in real time on destination.txt.Kafka Connect hold Batch Properties.
-    
+OBSERVATION: 
+ - The data in souce.txt has been moved into destination.txt.
+ - If you keep adding stuff in source.txt, the changes won't reflect in real time on destination.txt.Kafka Connect hold Batch Properties.
+ - The data has been moved via topic (connect-test) mentioned in the  /usr/local/kafka/kafka_2.12-2.3.0/config/connect-file-source.properties.
+ 
+ 
 ```  
+![image](https://user-images.githubusercontent.com/45539698/66560083-46ea3a80-eb74-11e9-8949-ffe33004eba3.png)
 
 
