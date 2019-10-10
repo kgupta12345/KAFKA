@@ -139,13 +139,15 @@
 
 <hr>
 
-***POINTS TO NOTE:***
+***GREAT POINTS TO NOTE:***
 ___________________
 
-*WHAT IF - PRODUCER HOSTING ON A REPLICA | CONSUMER LISTENING FROM REPLICA* </br>
-![image](https://user-images.githubusercontent.com/45539698/66397055-a9b6c700-e9f8-11e9-8a56-67df260572e4.png)
+*WE CANNOT CREATE A TOPIC WITH 0 PARTITIONS* </br>
+*WE CANNOT CREATE A TOPIC WITH 0 REPLICAS* </br>
+*WE CANNOT CREATE A TOPIC WITH 0 PARTITIONS & 0 REPLICAS* </br>
 
-*WHAT IF - ONLY 1 REPLICA * </br>
+*WHAT IF - WE CRATE A TOPIC OF ONLY 1 REPLICA - 1 PARTITION* </br>
+
 ![image](https://user-images.githubusercontent.com/45539698/66483187-38434b00-eac2-11e9-8cbc-bc7d80fd7633.png)
 
 
