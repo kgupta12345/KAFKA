@@ -6,8 +6,8 @@
 	<artifactId>spring-boot-with-kafka</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>spring-boot-with-kafka</name>
-	<description>Demo project for Spring Boot</description>
+	<name>SpringBootKafka</name>
+	<description>Demo project for Spring Boot + Kafka</description>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
