@@ -195,5 +195,9 @@ OBSERVATION:
 ```  
 ![image](https://user-images.githubusercontent.com/45539698/66560083-46ea3a80-eb74-11e9-8949-ffe33004eba3.png)
 ![image](https://user-images.githubusercontent.com/45539698/66560504-2a023700-eb75-11e9-979b-5e2312b86d4a.png)
-
+###### To view any data on any topic:
+```
+bin/kafka-console-consumer.sh --bootstrap-server localhost:8082 --topic connect-test --from-beginning
+```
+![image](https://user-images.githubusercontent.com/45539698/66562637-af87e600-eb79-11e9-8e4d-72e753101aa2.png)
 
