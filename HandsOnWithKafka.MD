@@ -182,10 +182,11 @@ bin/kafka-console-producer.sh --broker-list localhost:8080 --topic topicfrommoon
 ```
 [1] Create a source file [Any location | With Permissions | With some data].
 [2] Create a blank file [Any location | With Permissions]
-[3] Give the path of source file in /usr/local/kafka/kafka_2.12-2.3.0/config/connect-file-source.properties
-[4] Give the path of destination file in /usr/local/kafka/kafka_2.12-2.3.0/config/connect-file-sink.properties
-[5] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0/
-[6] Execute: bin/connect-standalone.sh config/connect-standalone.properties config/connect-file-source.properties config/connect-file-sink.properties
+[3] Give the path of source file in: /usr/local/kafka/kafka_2.12-2.3.0/config/connect-file-source.properties
+[4] Give the path of destination file in: /usr/local/kafka/kafka_2.12-2.3.0/config/connect-file-sink.properties
+[5] Give any RUNNING broker port number in: /usr/local/kafka/kafka_2.12-2.3.0/config/connect-standalone.properties
+[6] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0/
+[7] Execute: bin/connect-standalone.sh config/connect-standalone.properties config/connect-file-source.properties config/connect-file-sink.properties
 
 OBSERVATION: 
  - The data in souce.txt has been moved into destination.txt.
