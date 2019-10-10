@@ -70,6 +70,7 @@ bin/kafka-topics.sh --create --bootstrap-server localhost:8081 --replication-fac
 
 
 
+![image](https://user-images.githubusercontent.com/45539698/66598919-be918700-ebbf-11e9-8c44-d16bac691680.png)
 
 
 
