@@ -54,14 +54,14 @@
     
  ```
   
-##### STEP#2:Broker/s should be Running :
+##### STEP#2: Input & Output Streams should be Running :
 ###### Create Input Stream:
 ```
-bin/kafka-topics.sh --create --bootstrap-server localhost:8082 --replication-factor 1 --partitions 1 --topic input-stream
+bin/kafka-topics.sh --create --bootstrap-server localhost:8081 --replication-factor 1 --partitions 1 --topic input-stream
 ```
 ###### Create Output Stream:
 ```
-bin/kafka-topics.sh --create --bootstrap-server localhost:8082 --replication-factor 1 --partitions 1 --topic output-stream --config cleanup.policy=compact
+bin/kafka-topics.sh --create --bootstrap-server localhost:8081 --replication-factor 1 --partitions 1 --topic output-stream --config cleanup.policy=compact
 ```
 
 
