@@ -142,16 +142,16 @@
 ***GREAT POINTS TO NOTE:***
 ___________________
 
-*WE CANNOT CREATE A TOPIC WITH 0 PARTITIONS* </br>
-*WE CANNOT CREATE A TOPIC WITH 0 REPLICAS* </br>
-*WE CANNOT CREATE A TOPIC WITH 0 PARTITIONS & 0 REPLICAS* </br>
+*[1] WE CANNOT CREATE A TOPIC WITH 0 PARTITIONS* </br>
+*[2] WE CANNOT CREATE A TOPIC WITH 0 REPLICAS* </br>
+*[3] WE CANNOT CREATE A TOPIC WITH 0 PARTITIONS & 0 REPLICAS* </br>
 
-*WHAT IF - WE CRATE A TOPIC OF ONLY 1 REPLICA - 1 PARTITION* </br>
+*[4] LET US CRATE A TOPIC OF ONLY 1 REPLICA - 1 PARTITION. THE TOPIC WILL BE CREATED ON ANY BROKER (HERE: 8082). NOW WE ARE CREATING A PRODUCER ON 8080. AND CONSUMER ON 8082/8080/8081. THE GREAT POINT TO NOTE IS THAT INTERNALLY THINGS GETS INTER-COMMUNICATED IN REAL TIME.
 
 ![image](https://user-images.githubusercontent.com/45539698/66483187-38434b00-eac2-11e9-8cbc-bc7d80fd7633.png)
 
 
-*WHAT IF - PRODUCER HOSTING ON RANDOM TOPIC:* </br>
+*[5] WHAT IF - PRODUCER HOSTING ON RANDOM TOPIC:* </br>
 ```
 bin/kafka-console-producer.sh --broker-list localhost:8080 --topic topicfrommoon
 ```
@@ -166,7 +166,7 @@ bin/kafka-console-producer.sh --broker-list localhost:8080 --topic topicfrommoon
 ![image](https://user-images.githubusercontent.com/45539698/66472418-d5928500-eaaa-11e9-82e8-c80f2a56d78c.png)
 
 
-*WHAT IF - CONSUMER LISTENING ON RANDOM TOPIC:* </br>
+*[6] WHAT IF - CONSUMER LISTENING ON RANDOM TOPIC:* </br>
 ```
  bin/kafka-console-consumer.sh --bootstrap-server localhost:8080 --topic topicfromvenus --from-beginning
 ```
