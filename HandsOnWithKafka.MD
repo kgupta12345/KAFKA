@@ -142,14 +142,18 @@
 ***GREAT POINTS TO NOTE:***
 ___________________
 
-*[1] WE CANNOT CREATE A TOPIC WITH 0 PARTITIONS* </br>
-*[2] WE CANNOT CREATE A TOPIC WITH 0 REPLICAS* </br>
-*[3] WE CANNOT CREATE A TOPIC WITH 0 PARTITIONS & 0 REPLICAS* </br>
+*[1] We cannot create a topic with 0 Partitions. </br>
+*[2] We cannot create a topic with 0 Replicas* </br>
+*[3] We cannot create a topic with 0 Partitions & 0 Replicas* </br>
 
-*[4] LET US CRATE A TOPIC OF ONLY 1 REPLICA - 1 PARTITION. THE TOPIC WILL BE CREATED ON ANY BROKER (HERE: 8082). NOW WE ARE CREATING A PRODUCER ON 8080. AND CONSUMER ON 8082/8080/8081. THE GREAT POINT TO NOTE IS THAT INTERNALLY THINGS GETS INTER-COMMUNICATED IN REAL TIME.
+*[4] WHAT IF - TOPIC CREATION HOST IS DIFFERENT FROM PRODUCER/CONSUMER:* </br>
 
 ![image](https://user-images.githubusercontent.com/45539698/66483187-38434b00-eac2-11e9-8cbc-bc7d80fd7633.png)
-
+*So far, we created  topics, producers and consumers on same broker(port).The topic replicas floated around in the cluster. Now, let us consider a situation:*
+ - *Create a topic with only 1 Replica and 1 Partition. The newly created topic will get created on any broker randomly (Here: 8082).*
+ - *Create a producer on 8080.
+ - *Create a consumer on 8080. Then 8082.*
+*OBSERVATION: Internally, all brokers are inter-communicating & inter-connected with Zookeeper & Kafka cluster.Therefore computing is abstracted.
 
 *[5] WHAT IF - PRODUCER HOSTING ON RANDOM TOPIC:* </br>
 ```
