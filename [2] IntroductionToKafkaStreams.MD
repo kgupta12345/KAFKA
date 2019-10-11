@@ -59,13 +59,13 @@
 
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
-[2] Execute: bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic  plaintext-output --from-beginning --formatter kafka.tools.DefaultMessageFormatter --property print.key=true --property print.value=true --property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer
+[2] Execute: bin/kafka-console-consumer.sh --bootstrap-server localhost:8081 --topic  plaintext-output --from-beginning --formatter kafka.tools.DefaultMessageFormatter --property print.key=true --property print.value=true --property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer
 	
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0    
-[2] Execute: bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic wordcount-output --from-beginning --formatter kafka.tools.DefaultMessageFormatter --property print.key=true --property print.value=true --property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer
+[2] Execute: bin/kafka-console-consumer.sh --bootstrap-server localhost:8081 --topic wordcount-output --from-beginning --formatter kafka.tools.DefaultMessageFormatter --property print.key=true --property print.value=true --property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer
 	
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0    
-[2] Execute: bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic linesplit-output --from-beginning --formatter kafka.tools.DefaultMessageFormatter --property print.key=true --property print.value=true --property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer
+[2] Execute: bin/kafka-console-consumer.sh --bootstrap-server localhost:8081 --topic linesplit-output --from-beginning --formatter kafka.tools.DefaultMessageFormatter --property print.key=true --property print.value=true --property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer
 	       
 ```
 
