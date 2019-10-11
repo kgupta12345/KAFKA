@@ -37,12 +37,6 @@
     --replication-factor 1 \
     --partitions 1 \
     --topic wordcount-input-stream
-[3] Execute: 
-    bin/kafka-topics.sh --create \
-    --bootstrap-server localhost:9092 \
-    --replication-factor 1 \
-    --partitions 1 \
-    --topic plaintext-input-stream
 ```
 ###### Output Topics:
 ```
@@ -54,21 +48,13 @@
     --partitions 1 \
     --topic wordcount-output-stream \
     --config cleanup.policy=compact
-    
-[3] Execute:
-    bin/kafka-topics.sh --create \
-    --bootstrap-server localhost:9092 \
-    --replication-factor 1 \
-    --partitions 1 \
-    --topic plaintext-output-stream \
-    --config cleanup.policy=compact    
+  
 ```
 ##### STEP#3: Producer/Consumer should be Running :
 ###### Producer:
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: bin/kafka-console-producer.sh --broker-list localhost:9092 --topic wordcount-input-stream
-[3] Execute: bin/kafka-console-producer.sh --broker-list localhost:9092 --topic plaintext-input-stream
 ```
 ###### Consumer:
 
@@ -84,16 +70,6 @@ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 \
     --property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer \
     --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer
 	       
-[3] Execute: 
-bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 \
-    --topic plaintext-output-stream \
-    --from-beginning \
-    --formatter kafka.tools.DefaultMessageFormatter \
-    --property print.key=true \
-    --property print.value=true \
-    --property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer \
-    --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer
-	       	       
 ```
 
 
