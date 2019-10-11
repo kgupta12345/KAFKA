@@ -30,51 +30,44 @@
 ##### STEP#2: Input & Output topics should be Running :
 ###### Input Topics:
 ```
-bin/kafka-topics.sh --create --bootstrap-server localhost:8081 --replication-factor 1 --partitions 1 --topic plaintext-input
-bin/kafka-topics.sh --create --bootstrap-server localhost:8081 --replication-factor 1 --partitions 1 --topic wordcount-input
-bin/kafka-topics.sh --create --bootstrap-server localhost:8081 --replication-factor 1 --partitions 1 --topic linesplit-input
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
+[2] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:8081 --replication-factor 1 --partitions 1 --topic plaintext-input
+[3] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:8081 --replication-factor 1 --partitions 1 --topic wordcount-input
+[4] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:8081 --replication-factor 1 --partitions 1 --topic linesplit-input
 
 ```
 ###### Output Topics:
 ```
-bin/kafka-topics.sh --create --bootstrap-server localhost:8081 --replication-factor 1 --partitions 1 --topic plaintext-output --config cleanup.policy=compact
-bin/kafka-topics.sh --create --bootstrap-server localhost:8081 --replication-factor 1 --partitions 1 --topic wordcount-output --config cleanup.policy=compact
-bin/kafka-topics.sh --create --bootstrap-server localhost:8081 --replication-factor 1 --partitions 1 --topic linesplit-output --config cleanup.policy=compact
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
+[2] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:8081 --replication-factor 1 --partitions 1 --topic plaintext-output --config cleanup.policy=compact
+[3] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:8081 --replication-factor 1 --partitions 1 --topic wordcount-output --config cleanup.policy=compact
+[4] Execute: bin/kafka-topics.sh --create --bootstrap-server localhost:8081 --replication-factor 1 --partitions 1 --topic linesplit-output --config cleanup.policy=compact
 ```
 ##### STEP#3: Producer/Consumer should be Running :
 ###### Producer:
 ```
-bin/kafka-console-producer.sh --broker-list localhost:8081 --topic plaintext-input
-bin/kafka-console-producer.sh --broker-list localhost:8081 --topic wordcount-input
-bin/kafka-console-producer.sh --broker-list localhost:8081 --topic linesplit-input
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
+[2] Execute: bin/kafka-console-producer.sh --broker-list localhost:8081 --topic plaintext-input
+
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
+[2] Execute: bin/kafka-console-producer.sh --broker-list localhost:8081 --topic wordcount-input
+
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
+[2] Execute: bin/kafka-console-producer.sh --broker-list localhost:8081 --topic linesplit-input
 ```
 ###### Consumer:
 
 ```
-bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic  plaintext-output --from-beginning --formatter kafka.tools.DefaultMessageFormatter --property print.key=true --property print.value=true --property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
+[2] Execute: bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic  plaintext-output --from-beginning --formatter kafka.tools.DefaultMessageFormatter --property print.key=true --property print.value=true --property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer
 	
-    
-bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic wordcount-output --from-beginning --formatter kafka.tools.DefaultMessageFormatter --property print.key=true --property print.value=true --property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0    
+[2] Execute: bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic wordcount-output --from-beginning --formatter kafka.tools.DefaultMessageFormatter --property print.key=true --property print.value=true --property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer
 	
-    
-bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic linesplit-output --from-beginning --formatter kafka.tools.DefaultMessageFormatter --property print.key=true --property print.value=true --property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer
+[1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0    
+[2] Execute: bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic linesplit-output --from-beginning --formatter kafka.tools.DefaultMessageFormatter --property print.key=true --property print.value=true --property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer --property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer
 	       
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
