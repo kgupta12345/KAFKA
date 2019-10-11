@@ -178,7 +178,9 @@ bin/kafka-console-producer.sh --broker-list localhost:8080 --topic topicfrommoon
 *OBSERVATION1: The Topic (**topicfromvenus**) gets prepard on run-time, which can be listed using: **bin/kafka-topics.sh --list --zookeeper localhost:2181*** *OBSERVATION2: Consumer keeps waiting on topicfromvenus, till it receives any data*
 <hr>
 
-##### STEP#8: Testing with KAFKA-CONNECT:
+## KAFKA-CONNECT:
+
+##### Kafka Connect is used to move data from one source to another. Below we are movig data present in a file to another using Kafka-Connect.
 ```
 [1] Create a source file [Any location | With Permissions | With some data].
 [2] Create a blank file [Any location | With Permissions]
@@ -195,7 +197,7 @@ OBSERVATION:
 ```  
 ![image](https://user-images.githubusercontent.com/45539698/66560083-46ea3a80-eb74-11e9-8949-ffe33004eba3.png)
 ![image](https://user-images.githubusercontent.com/45539698/66560504-2a023700-eb75-11e9-979b-5e2312b86d4a.png)
-###### To view any data on any topic:
+###### To view any data on any topic (Not Limited to Kafka-Connect):
 ```
 bin/kafka-console-consumer.sh --bootstrap-server localhost:8082 --topic connect-test --from-beginning
 ```
