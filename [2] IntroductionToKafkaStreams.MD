@@ -10,11 +10,11 @@
 ![image](https://user-images.githubusercontent.com/45539698/66250650-2892d200-e763-11e9-9a29-2255515a6c16.png)
 
 
-##### STEP#2:Broker should be Running [Here only one]:
+##### STEP#2:Broker/s should be Running [Here only one]:
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0/config
-[2] Now, create a Brokers:
-    cp server.propertiess server-1.properties
+[2] Now, create a Broker:
+    cp server.properties server-1.properties
    
 [3] Now edit the below properties in the above broker files:
     - sudo gedit server-1.properties
