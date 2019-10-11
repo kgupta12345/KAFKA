@@ -14,16 +14,16 @@
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0/config
 [2] Now, create a Broker:
-    cp server.properties server-1.properties
+    cp server.properties server-9092.properties
    
 [3] Now edit the below properties in the above broker files:
-    - sudo gedit server-1.properties
-    - broker.id=81
-    - listeners=PLAINTEXT://:8081
-    - log.dirs=/tmp/kafka-logs-81   
+    - sudo gedit server-9092.properties
+    - broker.id=92
+    - listeners=PLAINTEXT://:9092
+    - log.dirs=/tmp/kafka-logs-92   
 [4] Start the Broker:  
     - Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0/
-    - Execute: bin/kafka-server-start.sh config/server-1.properties 
+    - Execute: bin/kafka-server-start.sh config/server-9092.properties 
     
  ```
   
@@ -36,7 +36,7 @@
     --bootstrap-server localhost:9092 \
     --replication-factor 1 \
     --partitions 1 \
-    --topic streams-plaintext-input
+    --topic wordcount-input-stream
 
 ```
 ###### Output Topics:
@@ -47,14 +47,14 @@
     --bootstrap-server localhost:9092 \
     --replication-factor 1 \
     --partitions 1 \
-    --topic streams-wordcount-output \
+    --topic wordcount-output-stream \
     --config cleanup.policy=compact
 ```
 ##### STEP#3: Producer/Consumer should be Running :
 ###### Producer:
 ```
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
-[2] Execute: bin/kafka-console-producer.sh --broker-list localhost:9092 --topic streams-plaintext-input
+[2] Execute: bin/kafka-console-producer.sh --broker-list localhost:9092 --topic wordcount-input-stream
 ```
 ###### Consumer:
 
@@ -62,7 +62,7 @@
 [1] Navigate: cd /usr/local/kafka/kafka_2.12-2.3.0
 [2] Execute: 
 bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 \
-    --topic streams-wordcount-output \
+    --topic wordcount-output-stream \
     --from-beginning \
     --formatter kafka.tools.DefaultMessageFormatter \
     --property print.key=true \
