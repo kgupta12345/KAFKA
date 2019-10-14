@@ -42,7 +42,13 @@ public class Example2Java8 {
 		
 		//Sort the list by last name
 		Collections.sort(peopleList,(People p1,People p2)->p1.getSecondName().compareTo(p2.getSecondName()));
-		System.out.print(peopleList);
+		System.out.println(peopleList);
+		
+		System.out.println("----------LISTING ALL--------------");
+		
+		peopleList.forEach(  
+	            (n)->System.out.println(n)  
+	        );
 	}
 
 }

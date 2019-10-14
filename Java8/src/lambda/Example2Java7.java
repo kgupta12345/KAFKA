@@ -44,7 +44,7 @@ class secondNameComp implements Comparator<Person>{
 public class Example2Java7 {
 
 	public static void main(String[] args) {
-		List personList = new ArrayList();
+		List <Person>personList = new ArrayList<Person>();
 		personList.add(new Person("Rahul","Vaish"));
 		personList.add(new Person("Shah","Alam"));
 		personList.add(new Person("Shah","Jahan"));
@@ -52,10 +52,13 @@ public class Example2Java7 {
 
 		//Sort the list by last name
 		Collections.sort(personList,new secondNameComp());
-		System.out.print(personList);
-		//List those name whose surname ends with 'J'
-
+		System.out.println(personList);
 		
+		System.out.println("----------LISTING ALL--------------");
+		
+		for(Person p : personList) {
+			System.out.print(p);
+		}
 		
 		
 		

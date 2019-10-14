@@ -15,7 +15,7 @@ interface Calculator2 {
 	int sum(int a, int b);
 }
 
-//==============================================
+//===================START[NFI]===========================
 interface Calculator3 {
 	default int sum(int a, int b) {
 		return a+b;
@@ -28,7 +28,7 @@ interface Calculator3 {
 class Calculator3Impl implements Calculator3{
 	
 }
-//==============================================
+//====================END[NFI]===========================
 
 public class Example1Java8 {
 
@@ -80,11 +80,12 @@ public class Example1Java8 {
 		
 		cal1.greetCalculator();
 		System.out.println(cal2.sum(3, 3));
-		//==============================================
+		//==================START[NFI]=======================
 		Calculator3 cal3 = new Calculator3Impl();
 		System.out.println(cal3.sum(3, 4));
 		System.out.println(Calculator3.mul(2, 4));
-		//==============================================
+		//==================END[NFI]=========================
+		
 	}
 }
 
