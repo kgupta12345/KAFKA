@@ -1,5 +1,5 @@
 cp spark-defaults.conf.template spark-defaults.conf.sh
-
+cp spark-env.sh.template spark-env.sh
 
 
 YARN: http://localhost:8088/cluster
