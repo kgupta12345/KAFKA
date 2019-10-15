@@ -1,3 +1,7 @@
+cp spark-defaults.conf.template spark-defaults.conf.sh
+cp spark-env.sh.template spark-env.sh
+
+
 YARN: http://localhost:8088/cluster
 HADOOPUI: http://localhost:9870/dfshealth.html#tab-overview
 SPARKUI: http://localhost:4040/jobs/
