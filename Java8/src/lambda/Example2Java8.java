@@ -46,9 +46,7 @@ public class Example2Java8 {
 		
 		System.out.println("----------LISTING ALL--------------");
 		
-		peopleList.forEach(  
-	            (n)->System.out.println(n)  
-	        );
+		peopleList.forEach((n)->System.out.println(n));
 	}
 
 }
