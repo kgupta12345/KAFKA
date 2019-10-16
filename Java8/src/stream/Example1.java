@@ -38,8 +38,8 @@ public class Example1 {
 		List <Person> personList = new ArrayList<Person>();
 		personList.add(new Person("SHAH","AGRA"));
 		personList.add(new Person("AKBAR","DELHI"));
-		personList.add(new Person("NOOR","LAHORE"));
-		personList.add(new Person("HUMANYUN","LUCKNOW"));
+		personList.add(new Person("NOOR","LUCKNOW"));
+		personList.add(new Person("HUMANYUN","LAHORE"));
 		
 		//WITHOUT STREAM:
 		/* for(Person p : personList) {
@@ -54,6 +54,11 @@ public class Example1 {
 		
 		//WITH STREAM:
 		personList.stream().filter(p -> p.getCity().startsWith("L")).forEach(p->System.out.println(p.getCity()));
+		
+		//ALSO IN STREAM:
+		personList.stream().filter(p -> p.getCity().startsWith("L")).forEachOrdered(p->System.out.println(p.getCity()));
+		//By the way: AL & LL both maintain the elements insertion order which means while displaying ArrayList and LinkedList
+		//elements the result set would be having the same order in which the elements got inserted into the List.
 		
 	}
 

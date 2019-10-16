@@ -1,7 +1,10 @@
 package lambda;
 
 // If you compare Java7 way with this Java8 way, you will find that:
-// [1] In Java8 interface (meant for Lambda) will have only one method.To ensure this we use @FunctionalInterface
+// [1] In Java8 interface (meant for Lambda) will have only one method.They are called Functional Interface. 
+//     To ensure this we use @FunctionalInterface (But this is not compulsory).
+//     Functional interfaces are new additions in java 8 which permit exactly one abstract method or default method or object class method inside them.
+//	   These interfaces are also called Single Abstract Method interfaces (SAM Interfaces).
 // [2] Writing Lambda expression is evolution to Anonymous Class style ! 
 
 
@@ -13,15 +16,27 @@ interface Calculator1 {
 @FunctionalInterface
 interface Calculator2 {
 	int sum(int a, int b);
+	
+	default int defaultFunction() {
+		return 0;
+	}
+   
+    static int staticFunction() {
+		return 0;
+	}
+    
+    @Override
+    public boolean equals(Object obj);        //Overridden from Object class
 }
 
 //===================START[NFI]===========================
+//@FunctionalInterface
 interface Calculator3 {
-	default int sum(int a, int b) {
-		return a+b;
+	default int defaultFunction() {
+		return 0;
 	}
-	static int mul(int a, int b) {
-		return a*b;
+	static int staticFunction() {
+		return 0;
 	}
 }
 
@@ -80,10 +95,12 @@ public class Example1Java8 {
 		
 		cal1.greetCalculator();
 		System.out.println(cal2.sum(3, 3));
+		System.out.println(cal2.defaultFunction());
+		System.out.println(Calculator2.staticFunction());
 		//==================START[NFI]=======================
 		Calculator3 cal3 = new Calculator3Impl();
-		System.out.println(cal3.sum(3, 4));
-		System.out.println(Calculator3.mul(2, 4));
+		System.out.println(cal3.defaultFunction());
+		System.out.println(Calculator3.staticFunction());
 		//==================END[NFI]=========================
 		
 	}
