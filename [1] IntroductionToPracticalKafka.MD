@@ -176,6 +176,9 @@ bin/kafka-console-producer.sh --broker-list localhost:8080 --topic topicfrommoon
 ```
 ![image](https://user-images.githubusercontent.com/45539698/66461729-4c258780-ea97-11e9-9394-6ed432b73d48.png)
 *OBSERVATION1: The Topic (**topicfromvenus**) gets prepard on run-time, which can be listed using: **bin/kafka-topics.sh --list --zookeeper localhost:2181*** *OBSERVATION2: Consumer keeps waiting on topicfromvenus, till it receives any data*
+
+*[7] WHAT IF - No. OF REPLICAS > No. OF PARTITIONS:* </br>
+![image](https://user-images.githubusercontent.com/45539698/67097411-afba5e00-f1d7-11e9-9dc5-d106a27a28c7.png)
 <hr>
 
 ## KAFKA-CONNECT:
