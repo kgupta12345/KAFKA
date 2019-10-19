@@ -17,3 +17,10 @@
    ![image](https://user-images.githubusercontent.com/689226/53510292-a44ce200-3ae3-11e9-95cc-aa1c10bbf99e.png)
 
  <hr>
+
+
+### <a id="MyHeading"></a>My Heading ###
+
+Now, I can link it using a standard Markdown link.
+
+Where is my [heading](#MyHeading)?
