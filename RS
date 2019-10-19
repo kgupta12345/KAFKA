@@ -1,0 +1,69 @@
+FOR MY NOTES
+
+
+__________________________________________
+
+Replication Controller | ReplicaSets
+
+Good Practice => make minimum =1
+
+RC =>  old | SUPPORTS EQAULITY BASED SELECTORS  | deploy an app | mentioned in GitHub.com/rahulvaish
+
+RS => new  | SUPPORTS SET BASED SELECTORS | gets created  when ‘DEPLOYMENT’ happens .
+
+
+
+
+EQAULITY BASED SELECTORS 
+Operator: in, notin,exists
+
+
+SET BASED SELECTORS
+Operator: = ,==,!=
+
+
+
+bash-3.2$ cat rset.yml
+apiVersion: apps/v1beta2
+kind: ReplicaSet
+metadata:
+  name: kubernetes-node-server-replicaset
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: kubernetes-node-server-replicaset
+  template:
+    metadata:
+      labels:
+        app: kubernetes-node-server-replicaset
+    spec:
+      containers:
+      - name: kubernetes-node-server-replicaset
+        image: rahulvaish/springbootdocker  
+        imagePullPolicy: IfNotPresent
+
+
+
+
+
+bash-3.2$ cat rsetservice.yml
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: kubernetes-node-server-replicaset
+  name: kubernetes-node-server-replicaset
+  namespace: default
+spec:
+  ports:
+  - nodePort: 31746
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: kubernetes-node-server-replicaset
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
