@@ -4,7 +4,7 @@
   
 <hr>
 
-- ###### [Dockerizing HelloWorld Java Application](https://github.com/rahulvaish/Docker-Java/tree/HelloDocker/HelloWorldJavaDocker) 
+- ###### [Dockerizing-HelloWorld Java Application](https://github.com/rahulvaish/Docker-Java/tree/HelloDocker/HelloWorldJavaDocker) 
    ###### This example illustrates how to Dockerize a simple Java Project. [[Source Code]](https://github.com/rahulvaish/Docker-Java/tree/HelloDocker)
    * Download the HelloWorldJavaDocker project.
    * Navigate inside the HelloWorldJavaDocker project folder from Docker QuickStart Terminal.
