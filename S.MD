@@ -1,5 +1,5 @@
 ### Table of Contents
-  - <a href='#Dockerizing-+-helloworld-java-application'>Dockerizing + HelloWorld Java Application</a> 
+  - <a href='#Dockerizing-helloworld-java-application'>Dockerizing + HelloWorld Java Application</a> 
 
   
 <hr>
