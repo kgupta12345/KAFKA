@@ -1,4 +1,4 @@
-package lambda;
+package sort;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -31,7 +31,7 @@ class People{
 	}
 }
 
-public class Example2Java8 {
+public class Example1Java8 {
 
 	public static void main(String[] args) {
 		List<People> peopleList = new ArrayList<People>();
@@ -41,11 +41,10 @@ public class Example2Java8 {
 		peopleList.add(new People("Akbar","Oman"));
 		
 		//Sort the list by last name
-		Collections.sort(peopleList,(People p1,People p2)->p1.getSecondName().compareTo(p2.getSecondName()));
-		//OR
-		//Collections.sort(peopleList,(p1,p2)->p1.getSecondName().compareTo(p2.getSecondName()));
-		System.out.println(peopleList);		
+		Collections.sort(peopleList,(p1,p2)->p1.getSecondName().compareTo(p2.getSecondName()));	
 		peopleList.forEach((n)->System.out.println(n));
+		
+		peopleList.stream().map(p -> p.getSecondName()).sorted().forEach(p -> System.out.println(p));
 	}
 
 }

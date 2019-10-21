@@ -1,4 +1,4 @@
-package lambda;
+package sort;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -41,7 +41,7 @@ class secondNameComp implements Comparator<Person>{
 	}
 }
 
-public class Example2Java7 {
+public class Example1Java7 {
 
 	public static void main(String[] args) {
 		List <Person>personList = new ArrayList<Person>();

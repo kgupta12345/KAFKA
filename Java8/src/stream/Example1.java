@@ -49,7 +49,7 @@ public class Example1 {
 		}*/
 		
 		//WITH STREAM:S-F-M-C
-		List<String> personList2 = personList.stream().filter(p -> p.getCity().startsWith("L")).map(p -> p.getCity()).collect(Collectors.toList());
+		List<String> personList2 = personList.stream().filter(p -> p.getCity().startsWith("L")).map(p -> p.getCity()).map(s -> s.toLowerCase()).collect(Collectors.toList());
 		System.out.println(personList2);
 
 		//WITH STREAMS: S-C
@@ -69,10 +69,21 @@ public class Example1 {
 		//By the way: AL & LL both maintain the elements insertion order which means while displaying ArrayList and LinkedList
 		//elements the result set would be having the same order in which the elements got inserted into the List.
 
+		//WITH STREAMS:S-M-FE
+		personList.stream().map(p->p.getName()).sorted().forEach(s -> System.out.print(s));
+		
 		//WITH STREAM:S-FE
 		personList.stream().forEach(p-> System.out.println(p.city));
 
-
-	}
+		//WITH STREAM:S-AM
+		boolean anycityWithL = personList.stream().anyMatch(p ->p.getCity().startsWith("L"));
+		if(anycityWithL) {
+			System.out.println("Yes there is a city with L");
+		}else {
+			System.out.println("No there is no city with L");
+		}
+		//WITH STREAM:S-C
+		int listItemsCount = (int) personList.stream().count();
+	}	
 
 }
