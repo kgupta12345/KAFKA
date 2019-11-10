@@ -111,3 +111,7 @@ SPARK MASTER UI (http://localhost:8080/) - No Activity
  
  
 =============================================================================================================================
+cd /home/rahul/IdeaProjects/SparkScalaMavenApp/target
+
+
+spark-submit --class com.sparkscala.WordCount SparkScalaMavenApp-1.0-SNAPSHOT.jar /home/rahul/IdeaProjects/SparkScalaMavenApp/src/main/resource/samplesource.txt
