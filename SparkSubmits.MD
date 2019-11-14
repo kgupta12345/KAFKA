@@ -1,3 +1,4 @@
+```
 cp spark-defaults.conf.template spark-defaults.conf.sh
 cp spark-env.sh.template spark-env.sh
 
@@ -115,3 +116,4 @@ cd /home/rahul/IdeaProjects/SparkScalaMavenApp/target
 
 
 spark-submit --class com.sparkscala.WordCount SparkScalaMavenApp-1.0-SNAPSHOT.jar /home/rahul/IdeaProjects/SparkScalaMavenApp/src/main/resource/samplesource.txt
+```
