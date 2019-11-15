@@ -1,3 +1,8 @@
+
+![image](https://user-images.githubusercontent.com/45539698/68943170-6bb77a80-07d0-11ea-9977-a16f35fc1018.png)
+
+
+
 ```
 spark-submit   --class org.apache.spark.examples.SparkPi  --master yarn  /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar 100
  ```
