@@ -1,11 +1,10 @@
-
+```
 spark-submit   --class org.apache.spark.examples.SparkPi  --master yarn  /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar 100
+ ```
  
  
  
- 
- 
- rahul@rahul:~$ clear
+```
 
 rahul@rahul:~$ spark-submit   --class org.apache.spark.examples.SparkPi   --master yarn  /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar 100
 2019-11-15 17:44:01 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
@@ -453,3 +452,4 @@ org.apache.spark.rpc.RpcEnvStoppedException: RpcEnv already stopped.
 2019-11-15 17:44:45 INFO  ShutdownHookManager:54 - Shutdown hook called
 2019-11-15 17:44:45 INFO  ShutdownHookManager:54 - Deleting directory /tmp/spark-b92a9ea0-926d-410c-99ee-2857ec8e8676
 2019-11-15 17:44:45 INFO  ShutdownHookManager:54 - Deleting directory /tmp/spark-711df588-24f9-4ba7-a142-eefe342a55ad
+```
