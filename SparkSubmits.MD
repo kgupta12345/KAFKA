@@ -37,8 +37,7 @@
  - ###### YARN [http://localhost:8088/cluster]- Launches |Because Hadoop is Running | No Activity
    ![image](https://user-images.githubusercontent.com/45539698/69361707-01607780-0cb3-11ea-855f-2e404a10a246.png)
  - ###### SPARKUI[http://localhost:4040/jobs/] -  No Activity | Activity logging(ing) on http://localhost:4041/jobs/  |After the execution is completed the URL http://localhost:4041/jobs/ is not more active.
- 
- 
+   ![image](https://user-images.githubusercontent.com/45539698/69363589-c4967f80-0cb6-11ea-97d5-b1611d409364.png) 
  - ###### SPARK MASTER UI [http://localhost:8080/] -  No Activity logged | Because weare on Local Mode
    ![image](https://user-images.githubusercontent.com/45539698/69361766-248b2700-0cb3-11ea-85b1-e827b9c51179.png)
  
