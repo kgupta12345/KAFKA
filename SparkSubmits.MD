@@ -7,12 +7,15 @@
 
 
 ##### ACTION: Launch spark-shell
+
 ##### OBSERVATION:  
  - ###### YARN [http://localhost:8088/cluster]- Launches |Because Hadoop is Running | No Activity
  
  - ###### SPARKUI[http://localhost:4040/jobs/] - Laucnches | No Activity logged
  
  - ###### SPARK MASTER UI [http://localhost:8080/] -  No Activity
+ 
+ ---
  
 ##### ACTION: Action from spark-shell
 ##### OBSERVATION:  
@@ -21,6 +24,8 @@
  - ###### SPARKUI[http://localhost:4040/jobs/] - Laucnches | No Activity logged
  
  - ###### SPARK MASTER UI [http://localhost:8080/] -  No Activity
+
+  ---
 
 ##### ACTION: Action from spark-shell
 ##### OBSERVATION: 
