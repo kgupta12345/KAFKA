@@ -66,7 +66,15 @@
 <hr>
  
 ##### ```ACTION:``` Action from spark-shell
-
+![image](https://user-images.githubusercontent.com/45539698/69371719-6b364c80-0cc6-11ea-84fd-a11b98669f67.png)
+*spark.read.format("csv").option("header","true").load("file:///home/rahul/JustFolder/air*") *
+##### ```OBSERVATION:```  
+ - ###### YARN [http://localhost:8088/cluster]- Launches | Because Hadoop is Running | No Activity
+   ![image](https://user-images.githubusercontent.com/45539698/69361707-01607780-0cb3-11ea-855f-2e404a10a246.png)
+ - ###### SPARKUI[http://localhost:4040/jobs/] - Activity logged
+   ![image](https://user-images.githubusercontent.com/45539698/69371468-e21f1580-0cc5-11ea-9e43-8fd4bd2f5c65.png)
+ - ###### SPARK MASTER UI [http://localhost:8080/] -  No Activity
+  ![image](https://user-images.githubusercontent.com/45539698/69370722-843dfe00-0cc4-11ea-82ff-e37a6f870833.png)
 
 <hr>
 
