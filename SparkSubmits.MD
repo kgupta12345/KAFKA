@@ -80,7 +80,7 @@
 
 ##### ACTION: Making a spark-submit
 
-**
+*spark-submit   --class org.apache.spark.examples.SparkPi   --master spark://localhost:7077   --executor-memory 1G   --total-executor-cores 2   /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar*
 ##### OBSERVATION: 
  - ###### YARN [http://localhost:8088/cluster]- Launches |Because Hadoop is Running | No Activity
    ![image](https://user-images.githubusercontent.com/45539698/69361707-01607780-0cb3-11ea-855f-2e404a10a246.png)
@@ -131,7 +131,7 @@ SPARK MASTER UI (http://localhost:8080/) -  Application Id generated on UI
 NEW TERMINAL:
  
 FIRE:  
-spark-submit   --class org.apache.spark.examples.SparkPi   --master spark://localhost:7077   --executor-memory 20G   --total-executor-cores 100   /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar 100
+spark-submit   --class org.apache.spark.examples.SparkPi   --master spark://localhost:7077   --executor-memory 1G   --total-executor-cores 2   /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar 100
 
  
 YARN (http://localhost:8088/cluster)-  No Activity
