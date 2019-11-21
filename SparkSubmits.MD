@@ -45,12 +45,14 @@
 <hr> 
 
 ``` 
-        
+```
+| STANDALONE MODE |
+|---|
+```     
 ```
 <hr>
 
-| STANDALONE MODE |
-|---|
+
 
 ##### ACTION: Launch spark-shell --master spark://localhost:7077
 
