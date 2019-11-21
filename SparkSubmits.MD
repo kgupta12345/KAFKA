@@ -79,15 +79,15 @@
 <hr>
 
 ##### ACTION: Making a spark-submit
-
-*spark-submit   --class org.apache.spark.examples.SparkPi   --master spark://localhost:7077   --executor-memory 1G   --total-executor-cores 2   /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar*
+![image](https://user-images.githubusercontent.com/45539698/69372580-f95f0280-0cc7-11ea-9fe4-c6a1317b6065.png)
+*spark-submit   --class org.apache.spark.examples.SparkPi   --master spark://localhost:7077  /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar*
 ##### OBSERVATION: 
  - ###### YARN [http://localhost:8088/cluster]- Launches |Because Hadoop is Running | No Activity
    ![image](https://user-images.githubusercontent.com/45539698/69361707-01607780-0cb3-11ea-855f-2e404a10a246.png)
  - ###### SPARKUI[http://localhost:4040/jobs/] -  No Activity | Activity logging on http://localhost:4041/jobs/  |After the execution is completed the URL http://localhost:4041/jobs/ is not more active.
-   ![image](https://user-images.githubusercontent.com/45539698/69368089-6f12a080-0cbf-11ea-8919-8367180bd5bb.png)
+  
  - ###### SPARK MASTER UI [http://localhost:8080/] -  No Activity logged | Because weare on Local Mode
-   ![image](https://user-images.githubusercontent.com/45539698/69368223-b305a580-0cbf-11ea-8805-e23706f46d95.png)
+  
  
 <hr> 
 ``` 
@@ -99,7 +99,7 @@
 <hr>
 
 
- 
+``` 
 ======================================================================
  
 YARN: http://localhost:8088/cluster
