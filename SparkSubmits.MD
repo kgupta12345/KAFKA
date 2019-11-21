@@ -62,7 +62,8 @@
  - ###### SPARKUI[http://localhost:4040/jobs/] - Launches | No Activity logged
    ![image](https://user-images.githubusercontent.com/45539698/69366907-38d42180-0cbd-11ea-8ad9-32f2652b31e1.png)
  - ###### SPARK MASTER UI [http://localhost:8080/] - Activity logged
-   ![image](https://user-images.githubusercontent.com/45539698/69370722-843dfe00-0cc4-11ea-82ff-e37a6f870833.png)
+   ![image](https://user-images.githubusercontent.com/45539698/69373317-89517c00-0cc9-11ea-9bd1-5b5d7d484b69.png)
+
 <hr>
  
 ##### ```ACTION:``` Action from spark-shell
