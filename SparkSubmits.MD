@@ -15,7 +15,7 @@
 ##### ```OBSERVATION:```  
  - ###### YARN [http://localhost:8088/cluster]- Launches | Because Hadoop is Running | No Activity
    ![image](https://user-images.githubusercontent.com/45539698/69361707-01607780-0cb3-11ea-855f-2e404a10a246.png)
- - ###### SPARKUI[http://localhost:4040/jobs/] - Laucnches | No Activity logged
+ - ###### SPARKUI[http://localhost:4040/jobs/] - Launches | No Activity logged
    ![image](https://user-images.githubusercontent.com/45539698/69361734-15a47480-0cb3-11ea-9254-b6937a25c505.png)
  - ###### SPARK MASTER UI [http://localhost:8080/] -  No Activity
    ![image](https://user-images.githubusercontent.com/45539698/69361766-248b2700-0cb3-11ea-85b1-e827b9c51179.png)
@@ -55,14 +55,14 @@
 ```
 
 ##### ```ACTION:``` Launch spark-shell --master spark://localhost:7077
-
+![image](https://user-images.githubusercontent.com/45539698/69370560-2f9a8300-0cc4-11ea-809c-048ca2366b90.png)
 ##### ```OBSERVATION:``` 
  - ###### YARN [http://localhost:8088/cluster]- Launches | Because Hadoop is Running | No Activity
    ![image](https://user-images.githubusercontent.com/45539698/69361707-01607780-0cb3-11ea-855f-2e404a10a246.png)
- - ###### SPARKUI[http://localhost:4040/jobs/] - Laucnches | No Activity logged
+ - ###### SPARKUI[http://localhost:4040/jobs/] - Launches | No Activity logged
    ![image](https://user-images.githubusercontent.com/45539698/69366907-38d42180-0cbd-11ea-8ad9-32f2652b31e1.png)
  - ###### SPARK MASTER UI [http://localhost:8080/] - Activity logged
-   ![image](https://user-images.githubusercontent.com/45539698/69366754-fe6a8480-0cbc-11ea-96f8-3d52a6a83175.png)
+   ![image](https://user-images.githubusercontent.com/45539698/69370722-843dfe00-0cc4-11ea-82ff-e37a6f870833.png)
 <hr>
  
 ##### ```ACTION:``` Action from spark-shell
@@ -72,7 +72,7 @@
 
 ##### ACTION: Making a spark-submit
 
-*spark-submit --class org.apache.spark.examples.SparkPi --master spark://localhost:7077 /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar *
+**
 ##### OBSERVATION: 
  - ###### YARN [http://localhost:8088/cluster]- Launches |Because Hadoop is Running | No Activity
    ![image](https://user-images.githubusercontent.com/45539698/69361707-01607780-0cb3-11ea-855f-2e404a10a246.png)
@@ -82,7 +82,6 @@
    ![image](https://user-images.githubusercontent.com/45539698/69368223-b305a580-0cbf-11ea-8805-e23706f46d95.png)
  
 <hr> 
-
 ``` 
 ```
 | YARN MODE |
