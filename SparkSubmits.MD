@@ -2,11 +2,14 @@
 ###### This guide aims to compare various spark activities: Launch of spark-shell, Action from spark-shell, spark-submit on Local, StandAlone and Yarn Mode.
 ![image](https://user-images.githubusercontent.com/45539698/69361353-53ed6400-0cb2-11ea-961b-33bad51efa8a.png)
 
+``` 
+```
 
 | LOCAL MODE |
 |---|
 
-
+``` 
+```
 ##### ACTION: Launch spark-shell
 ![image](https://user-images.githubusercontent.com/45539698/69361542-b6defb00-0cb2-11ea-9340-df936cc4f6ee.png)
 ##### OBSERVATION:  
@@ -22,7 +25,7 @@
 ![image](https://user-images.githubusercontent.com/45539698/69362736-1ccc8200-0cb5-11ea-8144-d9d687824b7a.png)
 *spark.read.format("csv").option("header","true").load("file:///home/rahul/JustFolder/air*")*
 ##### OBSERVATION:  
- - ###### YARN [http://localhost:8088/cluster]- Launches |Because Hadoop is Running | No Activity
+ - ###### YARN [http://localhost:8088/cluster]- Launches | Because Hadoop is Running | No Activity
    ![image](https://user-images.githubusercontent.com/45539698/69361707-01607780-0cb3-11ea-855f-2e404a10a246.png)
  - ###### SPARKUI[http://localhost:4040/jobs/] - Activity logged
    ![image](https://user-images.githubusercontent.com/45539698/69362975-93697f80-0cb5-11ea-808b-eeb8c535958a.png)
@@ -35,26 +38,21 @@
 ![image](https://user-images.githubusercontent.com/45539698/69363900-54d4c480-0cb7-11ea-8a35-2f0caee93ce3.png)
 *spark-submit --class org.apache.spark.examples.SparkPi --master local[8]  /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar 1000*
 ##### OBSERVATION: 
- - ###### YARN [http://localhost:8088/cluster]- Launches |Because Hadoop is Running | No Activity
+ - ###### YARN [http://localhost:8088/cluster]- Launches | Because Hadoop is Running | No Activity
    ![image](https://user-images.githubusercontent.com/45539698/69361707-01607780-0cb3-11ea-855f-2e404a10a246.png)
  - ###### SPARKUI[http://localhost:4040/jobs/] -  No Activity | Activity logging on http://localhost:4041/jobs/  |After the execution is completed the URL http://localhost:4041/jobs/ is not more active.
    ![image](https://user-images.githubusercontent.com/45539698/69363589-c4967f80-0cb6-11ea-97d5-b1611d409364.png) 
  - ###### SPARK MASTER UI [http://localhost:8080/] -  No Activity logged | Because weare on Local Mode
    ![image](https://user-images.githubusercontent.com/45539698/69361766-248b2700-0cb3-11ea-85b1-e827b9c51179.png)
  
-
-
 ``` 
 ```
 
 | STANDALONE MODE |
 |---|
 
-
 ``` 
 ```
-
-
 
 ##### ACTION: Launch spark-shell --master spark://localhost:7077
 
