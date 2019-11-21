@@ -51,11 +51,6 @@
 | STANDALONE MODE |
 |---|
 
-```
-
-```
-
-<hr>
 
 
 
