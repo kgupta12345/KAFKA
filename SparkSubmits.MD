@@ -60,13 +60,13 @@
  - ###### YARN [http://localhost:8088/cluster]- Launches | Because Hadoop is Running | No Activity
    ![image](https://user-images.githubusercontent.com/45539698/69361707-01607780-0cb3-11ea-855f-2e404a10a246.png)
  - ###### SPARKUI[http://localhost:4040/jobs/] - Laucnches | No Activity logged
-   ![image](https://user-images.githubusercontent.com/45539698/69361734-15a47480-0cb3-11ea-9254-b6937a25c505.png)
- - ###### SPARK MASTER UI [http://localhost:8080/] -  No Activity
-   ![image](https://user-images.githubusercontent.com/45539698/69361766-248b2700-0cb3-11ea-85b1-e827b9c51179.png)
+   ![image](https://user-images.githubusercontent.com/45539698/69366907-38d42180-0cbd-11ea-8ad9-32f2652b31e1.png)
+ - ###### SPARK MASTER UI [http://localhost:8080/] - Activity logged
+   ![image](https://user-images.githubusercontent.com/45539698/69366754-fe6a8480-0cbc-11ea-96f8-3d52a6a83175.png)
 <hr>
  
 ##### ```ACTION:``` Action from spark-shell
-![image](https://user-images.githubusercontent.com/45539698/69362736-1ccc8200-0cb5-11ea-8144-d9d687824b7a.png)
+
 *spark.read.format("csv").option("header","true").load("file:///home/rahul/JustFolder/air*")*
 ##### ```OBSERVATION:```  
  - ###### YARN [http://localhost:8088/cluster]- Launches | Because Hadoop is Running | No Activity
