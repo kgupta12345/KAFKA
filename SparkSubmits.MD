@@ -55,27 +55,27 @@
 ```
 
 ##### ```ACTION:``` Launch spark-shell --master spark://localhost:7077
-![image](https://user-images.githubusercontent.com/45539698/69370560-2f9a8300-0cc4-11ea-809c-048ca2366b90.png)
+![image](https://user-images.githubusercontent.com/45539698/69374132-6e800700-0ccb-11ea-93a7-666a6bf7915f.png)
 ##### ```OBSERVATION:``` 
  - ###### YARN [http://localhost:8088/cluster]- Launches | Because Hadoop is Running | No Activity
    ![image](https://user-images.githubusercontent.com/45539698/69361707-01607780-0cb3-11ea-855f-2e404a10a246.png)
  - ###### SPARKUI[http://localhost:4040/jobs/] - Launches | No Activity logged
-   ![image](https://user-images.githubusercontent.com/45539698/69366907-38d42180-0cbd-11ea-8ad9-32f2652b31e1.png)
+   ![image](https://user-images.githubusercontent.com/45539698/69374180-8c4d6c00-0ccb-11ea-94ad-2a5b63d72e82.png)
  - ###### SPARK MASTER UI [http://localhost:8080/] - Activity logged
-   ![image](https://user-images.githubusercontent.com/45539698/69373317-89517c00-0cc9-11ea-9bd1-5b5d7d484b69.png)
+   ![image](https://user-images.githubusercontent.com/45539698/69374290-c0289180-0ccb-11ea-9f81-cb82b233212b.png)
 
 <hr>
  
 ##### ```ACTION:``` Action from spark-shell
-![image](https://user-images.githubusercontent.com/45539698/69371719-6b364c80-0cc6-11ea-84fd-a11b98669f67.png)
+![image](https://user-images.githubusercontent.com/45539698/69374515-34633500-0ccc-11ea-95fe-434ae041fc5a.png)
 *spark.read.format("csv").option("header","true").load("file:///home/rahul/JustFolder/air*") *
 ##### ```OBSERVATION:```  
  - ###### YARN [http://localhost:8088/cluster]- Launches | Because Hadoop is Running | No Activity
    ![image](https://user-images.githubusercontent.com/45539698/69361707-01607780-0cb3-11ea-855f-2e404a10a246.png)
  - ###### SPARKUI[http://localhost:4040/jobs/] - Activity logged
-   ![image](https://user-images.githubusercontent.com/45539698/69371468-e21f1580-0cc5-11ea-9e43-8fd4bd2f5c65.png)
+  ![image](https://user-images.githubusercontent.com/45539698/69374582-5a88d500-0ccc-11ea-8aab-57a32d72322d.png)
  - ###### SPARK MASTER UI [http://localhost:8080/] -  No Activity
-  ![image](https://user-images.githubusercontent.com/45539698/69370722-843dfe00-0cc4-11ea-82ff-e37a6f870833.png)
+  ![image](https://user-images.githubusercontent.com/45539698/69374290-c0289180-0ccb-11ea-9f81-cb82b233212b.png)
 
 <hr>
 
