@@ -36,7 +36,8 @@
 ##### OBSERVATION: 
  - ###### YARN [http://localhost:8088/cluster]- Launches |Because Hadoop is Running | No Activity
    ![image](https://user-images.githubusercontent.com/45539698/69361707-01607780-0cb3-11ea-855f-2e404a10a246.png)
- - ###### SPARKUI[http://localhost:4040/jobs/] - Activity logged
+ - ###### SPARKUI[http://localhost:4040/jobs/] -  No Activity | Activity logging(ing) on http://localhost:4041/jobs/  |After the execution is completed the URL http://localhost:4041/jobs/ is not more active.
+ 
  
  - ###### SPARK MASTER UI [http://localhost:8080/] -  No Activity logged | Because weare on Local Mode
    ![image](https://user-images.githubusercontent.com/45539698/69361766-248b2700-0cb3-11ea-85b1-e827b9c51179.png)
@@ -48,7 +49,7 @@ NEW TERMINAL:
 FIRE: spark-submit   --class org.apache.spark.examples.SparkPi   --master local[8]   /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar   1000
  
 YARN (http://localhost:8088/cluster)-  No Activity
-SPARKUI(http://localhost:4040/jobs/) - No Activity | http://localhost:4041/jobs/ --->  Activity logging(ing) |After the execution is completed the URL http://localhost:4041/jobs/ is not more active.
+SPARKUI(http://localhost:4040/jobs/) - No Activity | Activity logging(ing) on http://localhost:4041/jobs/  |After the execution is completed the URL http://localhost:4041/jobs/ is not more active.
 SPARK MASTER UI (http://localhost:8080/) -  No Activity
  
 SPARK-SHELL TERMINAL:
