@@ -19,23 +19,29 @@
 
  
 ##### ACTION: Action from spark-shell
+![image](https://user-images.githubusercontent.com/45539698/69362736-1ccc8200-0cb5-11ea-8144-d9d687824b7a.png)
+*spark.read.format("csv").option("header","true").load("file:///home/rahul/JustFolder/air*")*
 ##### OBSERVATION:  
  - ###### YARN [http://localhost:8088/cluster]- Launches |Because Hadoop is Running | No Activity
- 
- - ###### SPARKUI[http://localhost:4040/jobs/] - Laucnches | No Activity logged
- 
+   ![image](https://user-images.githubusercontent.com/45539698/69361707-01607780-0cb3-11ea-855f-2e404a10a246.png)
+ - ###### SPARKUI[http://localhost:4040/jobs/] - Activity logged
+   ![image](https://user-images.githubusercontent.com/45539698/69362975-93697f80-0cb5-11ea-808b-eeb8c535958a.png)
  - ###### SPARK MASTER UI [http://localhost:8080/] -  No Activity
+   ![image](https://user-images.githubusercontent.com/45539698/69361766-248b2700-0cb3-11ea-85b1-e827b9c51179.png)
 
   ---
 
-##### ACTION: Action from spark-shell
+##### ACTION: Making a spark-submit
+
 ##### OBSERVATION: 
  - ###### YARN [http://localhost:8088/cluster]- Launches |Because Hadoop is Running | No Activity
+   ![image](https://user-images.githubusercontent.com/45539698/69361707-01607780-0cb3-11ea-855f-2e404a10a246.png)
+ - ###### SPARKUI[http://localhost:4040/jobs/] - Activity logged
  
- - ###### SPARKUI[http://localhost:4040/jobs/] - Laucnches | No Activity logged
+ - ###### SPARK MASTER UI [http://localhost:8080/] -  No Activity logged | Because weare on Local Mode
+   ![image](https://user-images.githubusercontent.com/45539698/69361766-248b2700-0cb3-11ea-85b1-e827b9c51179.png)
  
- - ###### SPARK MASTER UI [http://localhost:8080/] -  No Activity
- 
+ <hr>
  
 NEW TERMINAL: 
  
