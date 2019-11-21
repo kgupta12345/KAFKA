@@ -1,4 +1,4 @@
-### Practical Spark
+### Practical with Spark Hits
 ###### This guide aims to compare various spark activities: Launch of spark-shell, Action from spark-shell, spark-submit on Local, StandAlone and Yarn Mode.
 ![image](https://user-images.githubusercontent.com/45539698/69361353-53ed6400-0cb2-11ea-961b-33bad51efa8a.png)
 
