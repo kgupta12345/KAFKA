@@ -1,30 +1,34 @@
-```
-cp spark-defaults.conf.template spark-defaults.conf.sh
-cp spark-env.sh.template spark-env.sh
+### Practical Spark
+###### This guide aims to compare various spark activities: Launch of spark-shell, Action from spark-shell, spark-submit on Local, StandAlone and Yarn Mode.
 
 
-YARN: http://localhost:8088/cluster
-HADOOPUI: http://localhost:9870/dfshealth.html#tab-overview
-SPARKUI: http://localhost:4040/jobs/
-SPARK MASTER UI: http://localhost:8080/ 
-
-======================================================================
-
-START: HADOOP
-
-START: SPARK CLUSTER FOR S/A MODE
-cd /usr/local/spark/spark-2.3.4-bin-hadoop2.7/sbin/
-./start-all.sh
-
---------------
-LOCAL MODE:
+| LOCAL MODE |
+|---|
 
 
-START: spark-shell
+##### ACTION: Launch spark-shell
+##### OBSERVATION:  
+ - YARN [http://localhost:8088/cluster]- Launches |Because Hadoop is Running | No Activity
  
-YARN (http://localhost:8088/cluster)- Launches |Because Hadoop is Running | No Activity
-SPARKUI(http://localhost:4040/jobs/) - Laucnches | No Activity logged
-SPARK MASTER UI (http://localhost:8080/) -  No Activity
+ - SPARKUI[http://localhost:4040/jobs/] - Laucnches | No Activity logged
+ 
+ - SPARK MASTER UI [http://localhost:8080/] -  No Activity
+ 
+##### ACTION: Action from spark-shell
+##### OBSERVATION:  
+ - YARN [http://localhost:8088/cluster]- Launches |Because Hadoop is Running | No Activity
+ 
+ - SPARKUI[http://localhost:4040/jobs/] - Laucnches | No Activity logged
+ 
+ - SPARK MASTER UI [http://localhost:8080/] -  No Activity
+
+##### ACTION: Action from spark-shell
+##### OBSERVATION: 
+ - YARN [http://localhost:8088/cluster]- Launches |Because Hadoop is Running | No Activity
+ 
+ - SPARKUI[http://localhost:4040/jobs/] - Laucnches | No Activity logged
+ 
+ - SPARK MASTER UI [http://localhost:8080/] -  No Activity
  
  
 NEW TERMINAL: 
@@ -45,7 +49,28 @@ YARN (http://localhost:8088/cluster)-  No Activity
 SPARKUI(http://localhost:4040/jobs/) - Activity (spark reaad and show) logged
 SPARK MASTER UI (http://localhost:8080/) -  No Activity
  
- ======================================================================
+ 
+ 
+ ```
+ 
+======================================================================
+ 
+YARN: http://localhost:8088/cluster
+HADOOPUI: http://localhost:9870/dfshealth.html#tab-overview
+SPARKUI: http://localhost:4040/jobs/
+SPARK MASTER UI: http://localhost:8080/ 
+
+==========================
+
+START: HADOOP
+
+START: SPARK CLUSTER FOR S/A MODE
+cd /usr/local/spark/spark-2.3.4-bin-hadoop2.7/sbin/
+./start-all.sh
+
+--------------
+ 
+======================================================================
  STANDALONE MODE:[FRESH SETUP]
 
 
