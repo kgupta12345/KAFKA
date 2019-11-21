@@ -73,9 +73,9 @@
  - ###### YARN [http://localhost:8088/cluster]- Launches | Because Hadoop is Running | No Activity
    ![image](https://user-images.githubusercontent.com/45539698/69361707-01607780-0cb3-11ea-855f-2e404a10a246.png)
  - ###### SPARKUI[http://localhost:4040/jobs/] - Activity logged
-  ![image](https://user-images.githubusercontent.com/45539698/69374582-5a88d500-0ccc-11ea-8aab-57a32d72322d.png)
+   ![image](https://user-images.githubusercontent.com/45539698/69374582-5a88d500-0ccc-11ea-8aab-57a32d72322d.png)
  - ###### SPARK MASTER UI [http://localhost:8080/] -  No Activity
-  ![image](https://user-images.githubusercontent.com/45539698/69374290-c0289180-0ccb-11ea-9f81-cb82b233212b.png)
+   ![image](https://user-images.githubusercontent.com/45539698/69374290-c0289180-0ccb-11ea-9f81-cb82b233212b.png)
 
 <hr>
 
