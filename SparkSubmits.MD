@@ -42,11 +42,11 @@
  - ###### SPARK MASTER UI [http://localhost:8080/] -  No Activity logged | Because weare on Local Mode
    ![image](https://user-images.githubusercontent.com/45539698/69361766-248b2700-0cb3-11ea-85b1-e827b9c51179.png)
  
- <hr>
- ```
- 
- ```
- <hr>
+<hr>
+``` 
+```
+<hr>
+
  
 | STANDALONE MODE |
 |---|
