@@ -68,7 +68,7 @@
  
 ##### ```ACTION:``` Action from spark-shell
 ![image](https://user-images.githubusercontent.com/45539698/69374515-34633500-0ccc-11ea-95fe-434ae041fc5a.png)
-*spark.read.format("csv").option("header","true").load("file:///home/rahul/JustFolder/air*") *
+*spark.read.format("csv").option("header","true").load("file:///home/rahul/JustFolder/air*")*
 ##### ```OBSERVATION:```  
  - ###### YARN [http://localhost:8088/cluster]- Launches | Because Hadoop is Running | No Activity
    ![image](https://user-images.githubusercontent.com/45539698/69361707-01607780-0cb3-11ea-855f-2e404a10a246.png)
@@ -81,14 +81,13 @@
 
 ##### ACTION: Making a spark-submit
 ![image](https://user-images.githubusercontent.com/45539698/69372580-f95f0280-0cc7-11ea-9fe4-c6a1317b6065.png)
-*spark-submit   --class org.apache.spark.examples.SparkPi   --master spark://localhost:7077  /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar*
+*spark-submit --class org.apache.spark.examples.SparkPi --master spark://localhost:7077 /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar*
 ##### OBSERVATION: 
- - ###### YARN [http://localhost:8088/cluster]- Launches |Because Hadoop is Running | No Activity
+ - ###### YARN [http://localhost:8088/cluster]- Launches | Because Hadoop is Running | No Activity
    ![image](https://user-images.githubusercontent.com/45539698/69361707-01607780-0cb3-11ea-855f-2e404a10a246.png)
- - ###### SPARKUI[http://localhost:4040/jobs/] -  No Activity | Activity logging on http://localhost:4041/jobs/  |After the execution is completed the URL http://localhost:4041/jobs/ is not more active.
+ - ###### SPARKUI[http://localhost:4040/jobs/] -  
   
- - ###### SPARK MASTER UI [http://localhost:8080/] -  No Activity logged | Because weare on Local Mode
-  
+ - ###### SPARK MASTER UI [http://localhost:8080/] -  
  
 <hr> 
 ``` 
