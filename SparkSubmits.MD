@@ -23,7 +23,7 @@
  
 ##### ```ACTION:``` Action from spark-shell
 ![image](https://user-images.githubusercontent.com/45539698/69362736-1ccc8200-0cb5-11ea-8144-d9d687824b7a.png)
-*spark.read.format("csv").option("header","true").load("file:///home/rahul/JustFolder/air*") *
+*spark.read.format("csv").option("header","true").load("file:///home/rahul/JustFolder/air*")*
 ##### ```OBSERVATION:```  
  - ###### YARN [http://localhost:8088/cluster]- Launches | Because Hadoop is Running | No Activity
    ![image](https://user-images.githubusercontent.com/45539698/69361707-01607780-0cb3-11ea-855f-2e404a10a246.png)
@@ -85,10 +85,12 @@
 ##### OBSERVATION: 
  - ###### YARN [http://localhost:8088/cluster]- Launches | Because Hadoop is Running | No Activity
    ![image](https://user-images.githubusercontent.com/45539698/69361707-01607780-0cb3-11ea-855f-2e404a10a246.png)
- - ###### SPARKUI[http://localhost:4040/jobs/] -  
-  
- - ###### SPARK MASTER UI [http://localhost:8080/] -  
- 
+ - ###### SPARKUI[http://localhost:4040/jobs/] -  No Activity
+   ![image](https://user-images.githubusercontent.com/45539698/69410243-a4a3a200-0d30-11ea-95e9-5cf5ae1a36ef.png)
+ - ###### SPARK MASTER UI [http://localhost:8080/] -  Activity logged
+   ![image](https://user-images.githubusercontent.com/45539698/69410447-18de4580-0d31-11ea-8404-20940f470d2b.png)
+
+###### ```P.S. The spark-subit did not worked in first go. May be due to resources. So had to restart master & slaves```
 <hr> 
 ``` 
 ```
@@ -97,6 +99,54 @@
 ```
 ```
 <hr>
+
+##### ```ACTION:``` Launch spark-shell --master yarn
+![image](https://user-images.githubusercontent.com/45539698/69411497-167ceb00-0d33-11ea-9b93-93e2935f4598.png)
+##### ```OBSERVATION:``` 
+ - ###### YARN [http://localhost:8088/cluster]- Activity logged
+   ![image](https://user-images.githubusercontent.com/45539698/69411543-32808c80-0d33-11ea-9219-d1010959ba04.png)
+ - ###### SPARKUI[http://localhost:4040/jobs/] -
+   ![image](https://user-images.githubusercontent.com/45539698/69411864-d1a58400-0d33-11ea-987c-ffeabbdcaadb.png)
+   ![image](https://user-images.githubusercontent.com/45539698/69411619-5348e200-0d33-11ea-97ec-1c5eab4a6bfa.png)
+ - ###### SPARK MASTER UI [http://localhost:8080/] - 
+   ![image](https://user-images.githubusercontent.com/45539698/69411740-87bc9e00-0d33-11ea-8849-6043a18d3d38.png)
+<hr>
+
+##### ```ACTION:``` Action from spark-shell
+
+*spark.read.format("csv").option("header","true").load("file:///home/rahul/JustFolder/air*")*
+##### ```OBSERVATION:```  
+ - ###### YARN [http://localhost:8088/cluster]-
+ 
+ - ###### SPARKUI[http://localhost:4040/jobs/] -
+ 
+ - ###### SPARK MASTER UI [http://localhost:8080/] -  
+ 
+
+<hr>
+
+##### ACTION: Making a spark-submit
+
+*spark-submit --class org.apache.spark.examples.SparkPi --master yarn /usr/local/spark/spark-2.3.4-bin-hadoop2.7/examples/jars/spark-examples_2.11-2.3.4.jar*
+##### OBSERVATION: 
+ - ###### YARN [http://localhost:8088/cluster]- 
+ - ###### SPARKUI[http://localhost:4040/jobs/] - 
+ - ###### SPARK MASTER UI [http://localhost:8080/] - 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ``` 
